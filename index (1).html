@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DeepStudy AI · SEDES DF 2026 — Cronograma até a prova pela banca Quadrix</title>
+<meta name="description" content="A IA que cruza o edital da SEDES DF com o histórico da Quadrix e monta seu cronograma diário até 06/09/2026. Teste 7 dias grátis.">
+
+<!-- ============ META PIXEL ============ -->
+<!-- Reaproveitado do PM-SP. TROCAR o ID se a SEDES DF usar pixel próprio. -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1083649257004430');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1083649257004430&ev=PageView&noscript=1"/></noscript>
+<!-- ========== FIM META PIXEL ========== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy-900:#0B1220;
+  --navy-850:#0F1826;
+  --navy-800:#131C2E;
+  --navy-700:#1B2740;
+  --mint:#2ECC71;
+  --mint-dim:#25a35b;
+  --red-err:#E5484D;
+  --ink-100:#E8EDF4;
+  --ink-300:#B7C2D4;
+  --ink-500:#8A97AB;
+  --line:rgba(255,255,255,.08);
+  --maxw:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--navy-900);
+  color:var(--ink-100);
+  font-family:'Inter',system-ui,sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,.display{font-family:'Sora',sans-serif;line-height:1.12;letter-spacing:-.02em}
+.mono{font-family:'Space Mono',monospace}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+.mint{color:var(--mint)}
+.red{color:var(--red-err)}
+a{color:inherit}
+
+/* ---- Signature: grade Certo/Errado Quadrix ---- */
+.quadrix-grid{
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(var(--line) 1px,transparent 1px),
+    linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:52px 52px;
+  mask-image:radial-gradient(ellipse 80% 70% at 50% 0%,#000 30%,transparent 75%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 0%,#000 30%,transparent 75%);
+  opacity:.6;
+}
+
+/* ---- Urgência ---- */
+.urgency{
+  background:linear-gradient(90deg,var(--mint-dim),var(--mint));
+  color:#04140a;text-align:center;font-weight:700;
+  font-size:.86rem;padding:9px 16px;letter-spacing:.01em;
+}
+.urgency .mono{font-weight:700}
+
+/* ---- Nav ---- */
+.nav{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;
+  padding:20px 22px;max-width:var(--maxw);margin:0 auto}
+.brand{display:flex;align-items:center;gap:9px;font-family:'Sora';font-weight:800;font-size:1.15rem}
+.brand svg{width:26px;height:26px}
+.brand .dot{color:var(--mint)}
+.nav-cta{background:var(--mint);color:#04140a;font-weight:700;font-family:'Sora';
+  padding:10px 18px;border-radius:10px;text-decoration:none;font-size:.9rem;transition:.2s}
+.nav-cta:hover{background:#38e07f;transform:translateY(-1px)}
+
+/* ---- Hero ---- */
+.hero{position:relative;overflow:hidden;padding:56px 0 72px;text-align:center}
+.hero .wrap{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;
+  background:rgba(46,204,113,.1);border:1px solid rgba(46,204,113,.3);
+  color:var(--mint);font-weight:600;font-size:.8rem;padding:6px 14px;border-radius:999px;
+  margin-bottom:26px;font-family:'Space Mono'}
+.eyebrow .pulse{width:7px;height:7px;border-radius:50%;background:var(--mint);
+  box-shadow:0 0 0 0 rgba(46,204,113,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(46,204,113,0)}100%{box-shadow:0 0 0 0 rgba(46,204,113,0)}}
+.hero h1{font-size:clamp(2.1rem,5.4vw,3.5rem);font-weight:800;max-width:900px;margin:0 auto 22px}
+.hero p.sub{font-size:clamp(1rem,2vw,1.18rem);color:var(--ink-300);max-width:640px;margin:0 auto 34px}
+.btn-primary{display:inline-block;background:var(--mint);color:#04140a;font-family:'Sora';font-weight:700;
+  font-size:1.05rem;padding:16px 34px;border-radius:12px;text-decoration:none;
+  box-shadow:0 8px 30px rgba(46,204,113,.28);transition:.2s}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 38px rgba(46,204,113,.4)}
+.reassure{margin-top:16px;font-size:.86rem;color:var(--ink-500);display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.reassure span{display:inline-flex;align-items:center;gap:6px}
+
+/* ---- Section base ---- */
+section{position:relative}
+.sec{padding:72px 0}
+.sec-alt{background:var(--navy-850)}
+.tag{font-family:'Space Mono';font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--mint);font-weight:700;margin-bottom:14px;display:block;text-align:center}
+.sec h2{font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:800;text-align:center;max-width:760px;margin:0 auto 16px}
+.sec .lead{text-align:center;color:var(--ink-300);max-width:640px;margin:0 auto 44px;font-size:1.05rem}
+
+/* ---- Dor ---- */
+.pain-lead{font-size:1.12rem;color:var(--ink-300);max-width:720px;margin:0 auto 30px;text-align:center}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;max-width:900px;margin:0 auto}
+.pain-card{background:var(--navy-800);border:1px solid var(--line);border-left:3px solid var(--red-err);
+  border-radius:12px;padding:20px 22px}
+.pain-card .x{color:var(--red-err);font-weight:700;font-size:1.1rem;margin-right:8px}
+.pain-punch{text-align:center;font-family:'Sora';font-weight:700;font-size:1.3rem;margin-top:36px;max-width:640px;margin-left:auto;margin-right:auto}
+
+/* ---- Virada ---- */
+.turn{background:linear-gradient(180deg,var(--navy-850),var(--navy-900));text-align:center}
+.turn .xray{max-width:820px;margin:0 auto}
+.turn h2 .mint{display:inline}
+.xray-visual{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:38px auto 0;max-width:560px}
+.xray-cell{width:64px;height:44px;border-radius:8px;display:flex;align-items:center;justify-content:center;
+  font-family:'Space Mono';font-weight:700;font-size:.9rem;border:1px solid var(--line)}
+.xray-cell.hi{background:rgba(46,204,113,.14);border-color:rgba(46,204,113,.45);color:var(--mint)}
+.xray-cell.lo{background:rgba(229,72,77,.08);border-color:rgba(229,72,77,.3);color:var(--red-err)}
+.xray-cell.mid{background:var(--navy-800);color:var(--ink-500)}
+.xray-caption{margin-top:18px;font-size:.85rem;color:var(--ink-500);font-family:'Space Mono'}
+
+/* ---- 7 passos ---- */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;max-width:960px;margin:0 auto}
+.step{background:var(--navy-800);border:1px solid var(--line);border-radius:14px;padding:24px;position:relative;transition:.2s}
+.step:hover{border-color:rgba(46,204,113,.35);transform:translateY(-3px)}
+.step .num{font-family:'Space Mono';font-weight:700;font-size:.8rem;color:var(--mint);
+  border:1px solid rgba(46,204,113,.35);border-radius:7px;width:34px;height:34px;
+  display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.step h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.step p{color:var(--ink-500);font-size:.94rem}
+
+/* ---- Prova social ---- */
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;max-width:960px;margin:0 auto}
+.review{background:var(--navy-800);border:1px solid var(--line);border-radius:14px;padding:22px}
+.review .quote{font-size:.98rem;color:var(--ink-100);font-style:italic;margin-bottom:16px}
+.review .who{display:flex;align-items:center;gap:12px}
+.review .av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--mint),var(--navy-700));
+  display:flex;align-items:center;justify-content:center;font-family:'Sora';font-weight:700;color:#04140a;font-size:.95rem}
+.review .name{font-family:'Sora';font-weight:700;font-size:.92rem}
+.review .role{font-size:.78rem;color:var(--mint);font-family:'Space Mono'}
+.social-note{text-align:center;color:var(--ink-500);margin-top:30px;font-size:.95rem}
+
+/* ---- Empilhamento ---- */
+.stack{max-width:600px;margin:0 auto;background:var(--navy-800);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.stack-row{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-bottom:1px solid var(--line)}
+.stack-row .lbl{display:flex;align-items:center;gap:10px;font-size:.98rem}
+.stack-row .lbl .ic{color:var(--mint)}
+.stack-row .val{font-family:'Space Mono';color:var(--ink-300)}
+.stack-total{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;background:var(--navy-700)}
+.stack-total .lbl{font-family:'Sora';font-weight:700;font-size:1.05rem}
+.stack-total .val{font-family:'Sora';font-weight:800;font-size:1.4rem;color:var(--red-err);text-decoration:line-through}
+.stack-punch{text-align:center;font-family:'Sora';font-weight:700;font-size:1.25rem;margin-top:28px}
+.stack-punch .mint{border-bottom:2px solid var(--mint)}
+
+/* ---- Custo de oportunidade ---- */
+.cost-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:820px;margin:0 auto}
+.cost-card{background:var(--navy-800);border:1px solid var(--line);border-radius:14px;padding:26px;text-align:center}
+.cost-card .period{font-family:'Space Mono';font-size:.82rem;color:var(--ink-500);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.cost-card .amount{font-family:'Sora';font-weight:800;font-size:1.9rem;color:var(--red-err)}
+.cost-foot{text-align:center;color:var(--ink-300);max-width:640px;margin:34px auto 0;font-size:1.02rem}
+.cost-disclaimer{text-align:center;color:var(--ink-500);font-size:.78rem;max-width:640px;margin:16px auto 0;font-style:italic}
+
+/* ---- Planos ---- */
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:980px;margin:0 auto;align-items:stretch}
+.plan{background:var(--navy-800);border:1px solid var(--line);border-radius:18px;padding:30px 26px;display:flex;flex-direction:column;position:relative}
+.plan.pop{border-color:var(--mint);box-shadow:0 0 0 1px var(--mint),0 20px 60px rgba(46,204,113,.18)}
+.plan .badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:var(--mint);color:#04140a;font-family:'Sora';font-weight:700;font-size:.72rem;
+  padding:5px 16px;border-radius:999px;letter-spacing:.04em}
+.plan .pname{font-family:'Sora';font-weight:700;font-size:1.25rem;margin-bottom:4px}
+.plan .pdesc{color:var(--ink-500);font-size:.88rem;margin-bottom:20px;min-height:38px}
+.plan .price-main{font-family:'Sora';font-weight:800;font-size:2.3rem;line-height:1}
+.plan .price-main small{font-size:.95rem;color:var(--ink-500);font-weight:600}
+.plan .price-sub{font-family:'Space Mono';font-size:.82rem;color:var(--ink-300);margin-top:8px;min-height:20px}
+.plan ul{list-style:none;margin:22px 0;flex-grow:1}
+.plan li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font-size:.92rem;color:var(--ink-300)}
+.plan li .ck{color:var(--mint);flex-shrink:0;margin-top:3px}
+.plan li b{color:var(--ink-100)}
+.plan .pbtn{display:block;text-align:center;padding:14px;border-radius:11px;font-family:'Sora';font-weight:700;text-decoration:none;transition:.2s}
+.plan .pbtn.solid{background:var(--mint);color:#04140a}
+.plan .pbtn.solid:hover{background:#38e07f}
+.plan .pbtn.ghost{background:transparent;border:1px solid var(--mint);color:var(--mint)}
+.plan .pbtn.ghost:hover{background:rgba(46,204,113,.1)}
+.plans-note{text-align:center;color:var(--ink-500);margin-top:26px;font-size:.92rem}
+
+/* ---- FAQ ---- */
+.faq{max-width:720px;margin:0 auto}
+.faq-item{background:var(--navy-800);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.faq-q{width:100%;text-align:left;background:none;border:none;color:var(--ink-100);
+  font-family:'Sora';font-weight:600;font-size:1rem;padding:18px 22px;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-q .chev{transition:.25s;flex-shrink:0;color:var(--mint)}
+.faq-item.open .chev{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .28s ease;color:var(--ink-300)}
+.faq-a p{padding:0 22px 20px;font-size:.95rem}
+
+/* ---- Fechamento ---- */
+.close{text-align:center;background:linear-gradient(180deg,var(--navy-900),var(--navy-850));padding:84px 0}
+.close h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;max-width:680px;margin:0 auto 20px}
+.close p{color:var(--ink-300);max-width:560px;margin:0 auto 34px;font-size:1.08rem}
+
+/* ---- Footer ---- */
+footer{background:var(--navy-900);border-top:1px solid var(--line);padding:40px 0;text-align:center}
+footer .fbrand{display:inline-flex;align-items:center;gap:9px;font-family:'Sora';font-weight:800;margin-bottom:14px}
+footer .fbrand svg{width:22px;height:22px}
+footer .flinks{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;font-size:.86rem}
+footer .flinks a{color:var(--ink-500);text-decoration:none}
+footer .flinks a:hover{color:var(--mint)}
+footer .copy{color:var(--ink-500);font-size:.8rem;max-width:600px;margin:0 auto}
+
+@media (max-width:560px){
+  .sec{padding:56px 0}
+  .hero{padding:40px 0 54px}
+  .xray-cell{width:48px;height:38px;font-size:.78rem}
+  .plan.pop{order:-1}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<!-- URGÊNCIA -->
+<div class="urgency">Edital publicado · Prova em <span class="mono">06/09/2026</span> · Sua preparação começa agora</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="brand">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7l9 5 9-5-9-5z" fill="#2ECC71"/><path d="M3 12l9 5 9-5M3 17l9 5 9-5" stroke="#2ECC71" stroke-width="1.6" fill="none"/></svg>
+    DeepStudy<span class="dot">.AI</span>
+  </div>
+  <a href="#planos" class="nav-cta">Começar agora</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="quadrix-grid"></div>
+  <div class="wrap">
+    <span class="eyebrow"><span class="pulse"></span>SEDES DF · BANCA QUADRIX</span>
+    <h1>A única IA que já sabe o que cai na prova da <span class="mint">SEDES DF</span> — e monta seu cronograma até o dia da prova.</h1>
+    <p class="sub">Envie o edital, receba um plano de estudos diário baseado no padrão da banca Quadrix, com questões, flashcards e tutor de dúvidas 24h.</p>
+    <a href="#planos" class="btn-primary" onclick="fbq('track','InitiateCheckout')">Quero meu cronograma grátis agora</a>
+    <div class="reassure">
+      <span>✓ Teste 7 dias grátis</span>
+      <span>✓ Cancela quando quiser</span>
+      <span>✓ Sem fidelidade</span>
+    </div>
+  </div>
+</header>
+
+<!-- DOR -->
+<section class="sec">
+  <div class="wrap">
+    <span class="tag">O problema real</span>
+    <h2>Cada dia sem direção é um dia de vantagem a menos</h2>
+    <p class="pain-lead">O problema não é falta de vontade de estudar. É não saber por onde começar.</p>
+    <div class="pain-grid">
+      <div class="pain-card"><span class="x">✖</span>Qual matéria priorizar primeiro?</div>
+      <div class="pain-card"><span class="x">✖</span>O que realmente cai nas provas da Quadrix?</div>
+      <div class="pain-card"><span class="x">✖</span>Como treinar a discursiva — que é eliminatória para todos os cargos?</div>
+      <div class="pain-card"><span class="x">✖</span>Como encaixar tudo numa rotina que já tem trabalho, casa e cansaço?</div>
+    </div>
+    <p class="pain-punch">Estudar sem direção é estudar mais e <span class="red">aprender menos</span>.</p>
+  </div>
+</section>
+
+<!-- VIRADA -->
+<section class="sec turn">
+  <div class="wrap xray">
+    <span class="tag">A virada</span>
+    <h2>Raio-X da banca <span class="mint">Quadrix</span></h2>
+    <p class="lead">A DeepStudy cruza o edital da SEDES DF com o histórico de provas anteriores da Quadrix e te mostra, matéria por matéria, o que tem mais chance de cair. Você para de estudar tudo por igual e passa a estudar com prioridade.</p>
+    <div class="xray-visual">
+      <div class="xray-cell hi">✔</div><div class="xray-cell hi">✔</div><div class="xray-cell mid">·</div>
+      <div class="xray-cell hi">✔</div><div class="xray-cell lo">✖</div><div class="xray-cell hi">✔</div>
+      <div class="xray-cell mid">·</div><div class="xray-cell hi">✔</div><div class="xray-cell hi">✔</div>
+      <div class="xray-cell lo">✖</div><div class="xray-cell hi">✔</div><div class="xray-cell mid">·</div>
+    </div>
+    <p class="xray-caption">alta incidência · baixa incidência · a IA prioriza o que mais cai</p>
+  </div>
+</section>
+
+<!-- 7 PASSOS -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <span class="tag">Metodologia</span>
+    <h2>Como funciona, em 7 passos</h2>
+    <p class="lead">Deixe a burocracia do planejamento com a gente e foque apenas em estudar.</p>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h3>Envie o edital em PDF</h3><p>A IA lê todo o conteúdo programático da SEDES DF.</p></div>
+      <div class="step"><div class="num">02</div><h3>Receba seu plano + cronograma</h3><p>Cronograma diário ajustado à sua rotina até 06/09.</p></div>
+      <div class="step"><div class="num">03</div><h3>Tire dúvidas com o Tutor IA</h3><p>Sobre qualquer tema — da LC 840 à Assistência Social.</p></div>
+      <div class="step"><div class="num">04</div><h3>Pratique no estilo Quadrix</h3><p>Questões gabaritadas e comentadas, no padrão da banca.</p></div>
+      <div class="step"><div class="num">05</div><h3>Revise com flashcards</h3><p>Repetição espaçada pra não esquecer o que já estudou.</p></div>
+      <div class="step"><div class="num">06</div><h3>Acompanhe seu desempenho</h3><p>Veja seus pontos fracos antes da banca ver.</p></div>
+      <div class="step"><div class="num">07</div><h3>Reforço IA 24h na reta final</h3><p>Disponível a qualquer hora, inclusive na véspera da prova.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA SOCIAL -->
+<section class="sec">
+  <div class="wrap">
+    <span class="tag">Prova social</span>
+    <h2>Quem já usou, aprova</h2>
+    <div class="reviews">
+      <div class="review">
+        <p class="quote">"O plano de estudos da IA é surreal. Economizei horas de planejamento."</p>
+        <div class="who"><div class="av">CD</div><div><div class="name">Carla Dias</div><div class="role">Aprovada · TJ-SP</div></div></div>
+      </div>
+      <div class="review">
+        <p class="quote">"Fui direto ao ponto. Estudei só o que caía."</p>
+        <div class="who"><div class="av">BS</div><div><div class="name">Bruno Silva</div><div class="role">Aprovado · Receita Federal</div></div></div>
+      </div>
+      <div class="review">
+        <p class="quote">"A plataforma se pagou já no primeiro mês de estudo organizado."</p>
+        <div class="who"><div class="av">LC</div><div><div class="name">Letícia Costa</div><div class="role">Aprovada · INSS</div></div></div>
+      </div>
+    </div>
+    <p class="social-note">Candidatos da SEDES DF já estão usando a DeepStudy para organizar a reta final até setembro.</p>
+  </div>
+</section>
+
+<!-- EMPILHAMENTO -->
+<section class="sec sec-alt">
+  <div class="wrap">
+    <span class="tag">O valor real</span>
+    <h2>Quanto custaria contratar tudo isso separado?</h2>
+    <div class="stack">
+      <div class="stack-row"><span class="lbl"><span class="ic">◷</span>Mentoria &amp; Cronograma</span><span class="val">R$ 497,00</span></div>
+      <div class="stack-row"><span class="lbl"><span class="ic">▤</span>Raio-X da Banca</span><span class="val">R$ 197,00</span></div>
+      <div class="stack-row"><span class="lbl"><span class="ic">▣</span>Banco de Questões</span><span class="val">R$ 49,90</span></div>
+      <div class="stack-row"><span class="lbl"><span class="ic">⚑</span>Flashcards com IA</span><span class="val">R$ 29,90</span></div>
+      <div class="stack-total"><span class="lbl">Total mensal</span><span class="val">R$ 773,80</span></div>
+    </div>
+    <p class="stack-punch">No plano anual, você <span class="mint">não paga nem 5%</span> disso.</p>
+  </div>
+</section>
+
+<!-- CUSTO DE OPORTUNIDADE -->
+<section class="sec">
+  <div class="wrap">
+    <span class="tag">Custo de oportunidade</span>
+    <h2>Quanto custa <span class="red">não passar</span> na SEDES DF?</h2>
+    <div class="cost-grid">
+      <div class="cost-card"><div class="period">1 mês fora do cargo</div><div class="amount">~R$ 8.000</div></div>
+      <div class="cost-card"><div class="period">6 meses fora</div><div class="amount">~R$ 48.000</div></div>
+      <div class="cost-card"><div class="period">12 meses fora</div><div class="amount">~R$ 96.000</div></div>
+    </div>
+    <p class="cost-foot">O valor da sua assinatura é uma fração do que você deixa de ganhar a cada mês adiando a aprovação.</p>
+    <p class="cost-disclaimer">Valores ilustrativos, baseados em remuneração de referência de cargos da SEDES DF. A DeepStudy é uma ferramenta de organização e estudo e não garante aprovação, que depende do desempenho individual do candidato.</p>
+  </div>
+</section>
+
+<!-- PLANOS -->
+<section class="sec sec-alt" id="planos">
+  <div class="wrap">
+    <span class="tag">Investimento</span>
+    <h2>Escolha seu plano</h2>
+    <p class="lead">Sem multas. Sem fidelidade. Teste 7 dias grátis e cancele quando quiser.</p>
+    <div class="plans">
+
+      <!-- MENSAL -->
+      <div class="plan">
+        <div class="pname">Mensal</div>
+        <div class="pdesc">Acesso completo, pague mês a mês.</div>
+        <div class="price-main">R$ 79,90<small>/mês</small></div>
+        <div class="price-sub">cobrado mensalmente</div>
+        <ul>
+          <li><span class="ck">✔</span>5 planos de estudo por mês</li>
+          <li><span class="ck">✔</span>5 raio-x do edital</li>
+          <li><span class="ck">✔</span>Tutor IA ilimitado</li>
+          <li><span class="ck">✔</span>Banco de questões</li>
+          <li><span class="ck">✔</span>Flashcards com IA</li>
+        </ul>
+        <a href="https://pay.cakto.com.br/jmfahx5_981109" class="pbtn ghost" onclick="fbq('track','InitiateCheckout')">Começar meu plano</a>
+      </div>
+
+      <!-- TRIMESTRAL -->
+      <div class="plan pop">
+        <div class="badge">MAIS POPULAR</div>
+        <div class="pname">Trimestral</div>
+        <div class="pdesc">Economize e acelere seus estudos.</div>
+        <div class="price-main">R$ 39,90<small>/mês</small></div>
+        <div class="price-sub">3× de R$ 39,90 · R$ 119,90 a cada 3 meses</div>
+        <ul>
+          <li><span class="ck">✔</span>10 planos de estudo</li>
+          <li><span class="ck">✔</span>10 raio-x do edital</li>
+          <li><span class="ck">✔</span>Tutor IA ilimitado</li>
+          <li><span class="ck">✔</span>Banco de questões ampliado</li>
+          <li><span class="ck">✔</span>Flashcards ilimitados</li>
+        </ul>
+        <a href="https://pay.cakto.com.br/jmfahx5_981109" class="pbtn solid" onclick="fbq('track','InitiateCheckout')">Quero começar para a SEDES DF</a>
+      </div>
+
+      <!-- ANUAL -->
+      <div class="plan">
+        <div class="pname">Anual</div>
+        <div class="pdesc">Melhor custo-benefício para a reta longa.</div>
+        <div class="price-main">R$ 14,08<small>/mês</small></div>
+        <div class="price-sub">R$ 169 à vista ou 12× de R$ 17,58</div>
+        <ul>
+          <li><span class="ck">✔</span>Planos e raio-x <b>ilimitados</b></li>
+          <li><span class="ck">✔</span>Tutor IA <b>ilimitado</b></li>
+          <li><span class="ck">✔</span>Banco de questões <b>ilimitado</b></li>
+          <li><span class="ck">✔</span>Flashcards <b>ilimitados</b></li>
+          <li><span class="ck">✔</span>Melhor preço por mês</li>
+        </ul>
+        <a href="https://pay.cakto.com.br/jmfahx5_981109" class="pbtn ghost" onclick="fbq('track','InitiateCheckout')">Garantir o plano anual</a>
+      </div>
+
+    </div>
+    <p class="plans-note">Teste 7 dias grátis em qualquer plano · Sem cartão preso a fidelidade · Cancele quando quiser</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec">
+  <div class="wrap">
+    <span class="tag">Dúvidas frequentes</span>
+    <h2>Tudo que você precisa saber antes de começar</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <button class="faq-q">Funciona para nível médio e nível superior?<span class="chev">▾</span></button>
+        <div class="faq-a"><p>Sim. O plano se adapta ao cargo que você escolher — Técnico (nível médio) ou Especialista (nível superior).</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Se sair retificação do edital, o plano atualiza sozinho?<span class="chev">▾</span></button>
+        <div class="faq-a"><p>Sim. Basta reenviar o edital atualizado e a IA recalcula o cronograma automaticamente.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Preciso de algum programa específico?<span class="chev">▾</span></button>
+        <div class="faq-a"><p>Não. Funciona direto no navegador do celular ou do computador.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Como funciona a garantia de 7 dias?<span class="chev">▾</span></button>
+        <div class="faq-a"><p>Você testa por 7 dias. Se não gostar, cancela dentro desse prazo sem nenhum custo.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FECHAMENTO -->
+<section class="close">
+  <div class="wrap">
+    <h2>Faltam poucos meses até <span class="mint">06/09/2026</span></h2>
+    <p>Quem começa agora com direção chega mais preparado do que quem só decide na reta final.</p>
+    <a href="#planos" class="btn-primary" onclick="fbq('track','InitiateCheckout')">Quero meu cronograma até a prova</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fbrand">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7l9 5 9-5-9-5z" fill="#2ECC71"/><path d="M3 12l9 5 9-5M3 17l9 5 9-5" stroke="#2ECC71" stroke-width="1.6" fill="none"/></svg>
+    DeepStudy<span class="mint">.AI</span>
+  </div>
+  <div class="flinks">
+    <a href="/politica-de-privacidade">Política de Privacidade</a>
+    <a href="/termos">Termos de Uso</a>
+    <a href="#planos">Planos</a>
+  </div>
+  <p class="copy">© 2026 DeepStudy.AI · Feito para acelerar sua preparação. A DeepStudy é uma ferramenta de estudo e não possui vínculo com a banca Quadrix, com a SEDES ou com o Governo do Distrito Federal.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=btn.parentElement;
+    var ans=item.querySelector('.faq-a');
+    var open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight=null;
+    });
+    if(!open){
+      item.classList.add('open');
+      ans.style.maxHeight=ans.scrollHeight+'px';
+    }
+  });
+});
+</script>
+</body>
+</html>
