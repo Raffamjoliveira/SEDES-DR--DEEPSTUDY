@@ -18,7 +18,7 @@
     var payload=new URLSearchParams({id:pixelId,ev:eventName,eventID:eventId,dl:w.location.href,rl:d.referrer||'',if:'false',ts:String(Date.now())});
     Object.keys(params||{}).forEach(function(key){payload.set('cd['+key+']',params[key]);});
     var url='https://www.facebook.com/tr?'+payload.toString();
-    if(navigator.sendBeacon){navigator.sendBeacon(url);return;}
+    if(navigator.sendBeacon&&navigator.sendBeacon(url)){return;}
     var img=new Image(1,1);
     img.style.display='none';
     img.src=url;
@@ -551,7 +551,7 @@ document.querySelectorAll('.faq-q').forEach(function(btn){
     var payload=new URLSearchParams({id:pixelId,ev:eventName,eventID:eventId,dl:w.location.href,rl:d.referrer||'',if:'false',ts:String(Date.now())});
     Object.keys(params||{}).forEach(function(key){payload.set('cd['+key+']',params[key]);});
     var url='https://www.facebook.com/tr?'+payload.toString();
-    if(navigator.sendBeacon){navigator.sendBeacon(url);return;}
+    if(navigator.sendBeacon&&navigator.sendBeacon(url)){return;}
     var img=new Image(1,1);img.style.display='none';img.src=url;
   }
   function trackMeta(eventName,params,eventId){
@@ -561,29 +561,39 @@ document.querySelectorAll('.faq-q').forEach(function(btn){
     beaconFallback(eventName,id,params||{});
     return id;
   }
-  function appendCheckoutMetadata(link){
-    var url=new URL(link.href,w.location.href);
-    url.searchParams.set('plan',link.dataset.plan||'');
-    url.searchParams.set('currency',link.dataset.currency||'BRL');
-    url.searchParams.set('value',link.dataset.value||'');
-    link.href=url.toString();
+  function getCheckoutParams(link){
+    return {
+      content_name:link.dataset.plan||'plano',
+      content_category:'SEDES DF',
+      content_type:'product',
+      currency:link.dataset.currency||'BRL',
+      value:Number(link.dataset.value||0)
+    };
+  }
+  function fireCheckout(link){
+    if(link.dataset.checkoutTracked==='1'){return link.dataset.checkoutEventId;}
+    var eventId=createEventId('checkout');
+    link.dataset.checkoutTracked='1';
+    link.dataset.checkoutEventId=eventId;
+    try{trackMeta('InitiateCheckout',getCheckoutParams(link),eventId);}catch(err){
+      setTimeout(function(){throw err;},0);
+    }
+    return eventId;
   }
   ensureMetaPixel();
   document.querySelectorAll('.checkout-link').forEach(function(link){
-    appendCheckoutMetadata(link);
+    link.addEventListener('pointerdown',function(event){
+      if(event.button===0&&!event.metaKey&&!event.ctrlKey&&!event.shiftKey&&!event.altKey){fireCheckout(link);}
+    });
+    link.addEventListener('touchstart',function(){fireCheckout(link);},{passive:true});
     link.addEventListener('click',function(event){
-      var params={
-        content_name:link.dataset.plan||'plano',
-        content_category:'SEDES DF',
-        currency:link.dataset.currency||'BRL',
-        value:link.dataset.value||'0'
-      };
-      trackMeta('InitiateCheckout',params,createEventId('checkout'));
+      fireCheckout(link);
       if(event.defaultPrevented||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey||event.button!==0||link.target==='_blank'){
         return;
       }
       event.preventDefault();
-      setTimeout(function(){w.location.href=link.href;},700);
+      var destination=link.href;
+      setTimeout(function(){w.location.assign(destination);},700);
     });
   });
   var query=new URLSearchParams(w.location.search);
