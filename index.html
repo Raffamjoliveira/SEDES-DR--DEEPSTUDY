@@ -169,6 +169,12 @@ section{position:relative}
 .xray-cell.mid{background:var(--navy-800);color:var(--ink-500)}
 .xray-caption{margin-top:18px;font-size:.85rem;color:var(--ink-500);font-family:'Space Mono'}
 
+
+/* ---- VSL ---- */
+.vsl{background:var(--navy-900);padding:22px 0 72px}
+.vsl-card{max-width:520px;margin:0 auto;background:var(--navy-800);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,.18)}
+.vsl-card vturb-smartplayer{border-radius:14px;overflow:hidden}
+
 /* ---- 7 passos ---- */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;max-width:960px;margin:0 auto}
 .step{background:var(--navy-800);border:1px solid var(--line);border-radius:14px;padding:24px;position:relative;transition:.2s}
@@ -329,6 +335,22 @@ footer .copy{color:var(--ink-500);font-size:.8rem;max-width:600px;margin:0 auto}
       <div class="pain-card"><span class="x">✖</span>Como encaixar tudo numa rotina que já tem trabalho, casa e cansaço?</div>
     </div>
     <p class="pain-punch">Estudar sem direção é estudar mais e <span class="red">aprender menos</span>.</p>
+  </div>
+</section>
+
+
+<!-- VSL -->
+<section class="vsl" aria-label="Vídeo de apresentação">
+  <div class="wrap">
+    <div class="vsl-card">
+      <vturb-smartplayer id="vid-6a5eb0b9aeb1290ff50a5844" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
+      <script type="text/javascript">
+        var s=document.createElement("script");
+        s.src="https://scripts.converteai.net/8e5b8623-0871-4140-bf63-eaebe572a0e4/players/6a5eb0b9aeb1290ff50a5844/v4/player.js";
+        s.async=true;
+        document.head.appendChild(s);
+      </script>
+    </div>
   </div>
 </section>
 
