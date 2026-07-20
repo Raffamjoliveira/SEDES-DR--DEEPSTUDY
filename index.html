@@ -7,18 +7,46 @@
 <meta name="description" content="A IA que cruza o edital da SEDES DF com o histórico da Quadrix e monta seu cronograma diário até 06/09/2026. Teste 7 dias grátis.">
 
 <!-- ============ META PIXEL ============ -->
-<!-- Reaproveitado do PM-SP. TROCAR o ID se a SEDES DF usar pixel próprio. -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1083649257004430');
-fbq('track', 'PageView');
+(function(w,d,s,u){
+  var pixelId='1083649257004430';
+  var pageViewEventId='pv-'+Date.now()+'-'+Math.random().toString(36).slice(2);
+  w.metaPixelId=pixelId;
+  w.metaPageViewEventId=pageViewEventId;
+  w.metaCreateEventId=function(prefix){return (prefix||'evt')+'-'+Date.now()+'-'+Math.random().toString(36).slice(2);};
+  w.metaBeaconFallback=function(eventName,eventId,params){
+    var payload=new URLSearchParams({id:pixelId,ev:eventName,eventID:eventId,dl:w.location.href,rl:d.referrer||'',if:'false',ts:String(Date.now())});
+    Object.keys(params||{}).forEach(function(key){payload.set('cd['+key+']',params[key]);});
+    var url='https://www.facebook.com/tr?'+payload.toString();
+    if(navigator.sendBeacon&&navigator.sendBeacon(url)){return;}
+    var img=new Image(1,1);
+    img.style.display='none';
+    img.src=url;
+  };
+  w.metaTrack=function(eventName,params,eventId){
+    var id=eventId||w.metaCreateEventId(eventName.toLowerCase());
+    if(typeof w.fbq==='function'){w.fbq('track',eventName,params||{},{eventID:id});}
+    w.metaBeaconFallback(eventName,id,params||{});
+    return id;
+  };
+  !function(f,b,e,v,n,t,r){
+    if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments);};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+    r=b.getElementsByTagName(e)[0];r.parentNode.insertBefore(t,r);
+  }(w,d,s,u);
+  fbq('init',pixelId);
+  fbq('track','PageView',{},{eventID:pageViewEventId});
+  setTimeout(function(){
+    var found=false;
+    if(w.performance&&typeof w.performance.getEntriesByType==='function'){
+      found=w.performance.getEntriesByType('resource').some(function(entry){
+        return entry.name.indexOf('facebook.com/tr')!==-1&&entry.name.indexOf('ev=PageView')!==-1;
+      });
+    }
+    if(!found){w.metaBeaconFallback('PageView',pageViewEventId,{});}
+  },1500);
+})(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1083649257004430&ev=PageView&noscript=1"/></noscript>
@@ -393,7 +421,7 @@ footer .copy{color:var(--ink-500);font-size:.8rem;max-width:600px;margin:0 auto}
           <li><span class="ck">✔</span>Banco de questões</li>
           <li><span class="ck">✔</span>Flashcards com IA</li>
         </ul>
-        <a href="https://pay.cakto.com.br/jmfahx5_981109" class="pbtn ghost" onclick="fbq('track','InitiateCheckout')">Começar meu plano</a>
+        <a href="https://pay.cakto.com.br/zxrbobe" class="pbtn ghost checkout-link" data-plan="mensal" data-value="79.90" data-currency="BRL">Começar meu plano</a>
       </div>
 
       <!-- TRIMESTRAL -->
@@ -410,7 +438,7 @@ footer .copy{color:var(--ink-500);font-size:.8rem;max-width:600px;margin:0 auto}
           <li><span class="ck">✔</span>Banco de questões ampliado</li>
           <li><span class="ck">✔</span>Flashcards ilimitados</li>
         </ul>
-        <a href="https://pay.cakto.com.br/jmfahx5_981109" class="pbtn solid" onclick="fbq('track','InitiateCheckout')">Quero começar para a SEDES DF</a>
+        <a href="https://pay.cakto.com.br/3e2izku" class="pbtn solid checkout-link" data-plan="trimestral" data-value="119.90" data-currency="BRL">Quero começar para a SEDES DF</a>
       </div>
 
       <!-- ANUAL -->
@@ -426,7 +454,7 @@ footer .copy{color:var(--ink-500);font-size:.8rem;max-width:600px;margin:0 auto}
           <li><span class="ck">✔</span>Flashcards <b>ilimitados</b></li>
           <li><span class="ck">✔</span>Melhor preço por mês</li>
         </ul>
-        <a href="https://pay.cakto.com.br/jmfahx5_981109" class="pbtn ghost" onclick="fbq('track','InitiateCheckout')">Garantir o plano anual</a>
+        <a href="https://pay.cakto.com.br/uzjrp8z" class="pbtn ghost checkout-link" data-plan="anual" data-value="169.00" data-currency="BRL">Garantir o plano anual</a>
       </div>
 
     </div>
@@ -499,6 +527,85 @@ document.querySelectorAll('.faq-q').forEach(function(btn){
     }
   });
 });
+
+
+(function(w,d){
+  var pixelId=w.metaPixelId||'1083649257004430';
+  function createEventId(prefix){
+    if(typeof w.metaCreateEventId==='function'){return w.metaCreateEventId(prefix);}
+    return (prefix||'evt')+'-'+Date.now()+'-'+Math.random().toString(36).slice(2);
+  }
+  function ensureMetaPixel(){
+    if(typeof w.fbq==='function'){return;}
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments);};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+      s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);
+    }(w,d,'script','https://connect.facebook.net/en_US/fbevents.js');
+    w.fbq('init',pixelId);
+    w.fbq('track','PageView',{},{eventID:w.metaPageViewEventId||createEventId('pv')});
+  }
+  function beaconFallback(eventName,eventId,params){
+    if(typeof w.metaBeaconFallback==='function'){w.metaBeaconFallback(eventName,eventId,params);return;}
+    var payload=new URLSearchParams({id:pixelId,ev:eventName,eventID:eventId,dl:w.location.href,rl:d.referrer||'',if:'false',ts:String(Date.now())});
+    Object.keys(params||{}).forEach(function(key){payload.set('cd['+key+']',params[key]);});
+    var url='https://www.facebook.com/tr?'+payload.toString();
+    if(navigator.sendBeacon&&navigator.sendBeacon(url)){return;}
+    var img=new Image(1,1);img.style.display='none';img.src=url;
+  }
+  function trackMeta(eventName,params,eventId){
+    ensureMetaPixel();
+    var id=eventId||createEventId(eventName.toLowerCase());
+    if(typeof w.fbq==='function'){w.fbq('track',eventName,params||{},{eventID:id});}
+    beaconFallback(eventName,id,params||{});
+    return id;
+  }
+  function getCheckoutParams(link){
+    return {
+      content_name:link.dataset.plan||'plano',
+      content_category:'SEDES DF',
+      content_type:'product',
+      currency:link.dataset.currency||'BRL',
+      value:Number(link.dataset.value||0)
+    };
+  }
+  function fireCheckout(link){
+    if(link.dataset.checkoutTracked==='1'){return link.dataset.checkoutEventId;}
+    var eventId=createEventId('checkout');
+    link.dataset.checkoutTracked='1';
+    link.dataset.checkoutEventId=eventId;
+    try{trackMeta('InitiateCheckout',getCheckoutParams(link),eventId);}catch(err){
+      setTimeout(function(){throw err;},0);
+    }
+    return eventId;
+  }
+  ensureMetaPixel();
+  document.querySelectorAll('.checkout-link').forEach(function(link){
+    link.addEventListener('pointerdown',function(event){
+      if(event.button===0&&!event.metaKey&&!event.ctrlKey&&!event.shiftKey&&!event.altKey){fireCheckout(link);}
+    });
+    link.addEventListener('touchstart',function(){fireCheckout(link);},{passive:true});
+    link.addEventListener('click',function(event){
+      fireCheckout(link);
+      if(event.defaultPrevented||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey||event.button!==0||link.target==='_blank'){
+        return;
+      }
+      event.preventDefault();
+      var destination=link.href;
+      setTimeout(function(){w.location.assign(destination);},700);
+    });
+  });
+  var query=new URLSearchParams(w.location.search);
+  var isPurchase=query.get('meta_event')==='Purchase'||query.get('purchase')==='success'||['approved','paid'].indexOf(query.get('status'))!==-1||['approved','paid'].indexOf(query.get('payment_status'))!==-1;
+  if(isPurchase){
+    trackMeta('Purchase',{
+      content_name:query.get('plan')||'plano',
+      currency:query.get('currency')||'BRL',
+      value:query.get('value')||'0'
+    },query.get('eventID')||createEventId('purchase'));
+  }
+})(window,document);
 </script>
 </body>
 </html>
