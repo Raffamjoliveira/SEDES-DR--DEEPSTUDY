@@ -232,11 +232,13 @@ section{position:relative}
 .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:980px;margin:0 auto;align-items:stretch}
 .plan{background:var(--navy-800);border:1px solid var(--line);border-radius:18px;padding:30px 26px;display:flex;flex-direction:column;position:relative}
 .plan.pop{border-color:var(--mint);box-shadow:0 0 0 1px var(--mint),0 20px 60px rgba(46,204,113,.18)}
+.plan.elite{background:linear-gradient(180deg,#0b8f65,#087b57);border-color:#10b981;box-shadow:0 20px 70px rgba(16,185,129,.22)}
 .plan .badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);
-  background:var(--mint);color:#04140a;font-family:'Sora';font-weight:700;font-size:.72rem;
+  background:var(--navy-900);color:#fff;border:1px solid var(--mint);font-family:'Sora';font-weight:800;font-size:.72rem;
   padding:5px 16px;border-radius:999px;letter-spacing:.04em}
 .plan .pname{font-family:'Sora';font-weight:700;font-size:1.25rem;margin-bottom:4px}
-.plan .pdesc{color:var(--ink-500);font-size:.88rem;margin-bottom:20px;min-height:38px}
+.plan .pdesc{color:var(--ink-300);font-size:.88rem;margin-bottom:20px;min-height:38px}
+.plan .price-old{font-family:'Sora';font-weight:700;font-size:.86rem;color:var(--red-err);text-decoration:line-through;margin-bottom:2px}
 .plan .price-main{font-family:'Sora';font-weight:800;font-size:2.3rem;line-height:1}
 .plan .price-main small{font-size:.95rem;color:var(--ink-500);font-weight:600}
 .plan .price-sub{font-family:'Space Mono';font-size:.82rem;color:var(--ink-300);margin-top:8px;min-height:20px}
@@ -249,6 +251,8 @@ section{position:relative}
 .plan .pbtn.solid:hover{background:#38e07f}
 .plan .pbtn.ghost{background:transparent;border:1px solid var(--mint);color:var(--mint)}
 .plan .pbtn.ghost:hover{background:rgba(46,204,113,.1)}
+.plan .pbtn.light{background:#fff;color:#087b57}
+.plan .pbtn.light:hover{background:#eef5f1}
 .plans-note{text-align:center;color:var(--ink-500);margin-top:26px;font-size:.92rem}
 
 /* ---- FAQ ---- */
@@ -459,51 +463,68 @@ footer .copy{color:var(--ink-500);font-size:.8rem;max-width:600px;margin:0 auto}
 
       <!-- MENSAL -->
       <div class="plan">
-        <div class="pname">Mensal</div>
-        <div class="pdesc">Acesso completo, pague mês a mês.</div>
+        <div class="badge">BÁSICO</div>
+        <div class="pname">Plano Reta Final – 30 Dias</div>
+        <div class="pdesc">Acesso limitado, ideal para revisão rápida do conteúdo total da prova.</div>
+        <div class="price-old">de R$99,90 por</div>
         <div class="price-main">R$ 79,90<small>/mês</small></div>
-        <div class="price-sub">cobrado mensalmente</div>
+        <div class="price-sub">Apenas R$ 2,66 / dia</div>
         <ul>
-          <li><span class="ck">✔</span>5 planos de estudo por mês</li>
-          <li><span class="ck">✔</span>5 raio-x do edital</li>
-          <li><span class="ck">✔</span>Tutor IA ilimitado</li>
-          <li><span class="ck">✔</span>Banco de questões</li>
-          <li><span class="ck">✔</span>Flashcards com IA</li>
+          <li><span class="ck">✔</span>3 Planos + Cronograma de Estudo IA / Mês</li>
+          <li><span class="ck">✔</span>3 Raio-x do Edital e das provas anteriores</li>
+          <li><span class="ck">✔</span>Tutor Gemini Pro ilimitado</li>
+          <li><span class="ck">✔</span>Métricas de Desempenho</li>
+          <li><span class="ck">✔</span>Banco de Questões</li>
+          <li><span class="ck">✔</span>100 pedidos de provas anteriores</li>
+          <li><span class="ck">✔</span>Flash Cards com IA</li>
+          <li><span class="ck">✔</span>Até 3 questões por Mini-simulados</li>
+          <li><span class="ck">✔</span>10 Mini-simulados / dia</li>
         </ul>
-        <a href="https://pay.cakto.com.br/zxrbobe" class="pbtn ghost checkout-link" data-plan="mensal" data-value="79.90" data-currency="BRL">Começar meu plano</a>
+        <a href="https://pay.cakto.com.br/zxrbobe" class="pbtn solid checkout-link" data-plan="reta-final-30-dias" data-value="79.90" data-currency="BRL">Quero ser Aprovado</a>
       </div>
 
       <!-- TRIMESTRAL -->
       <div class="plan pop">
         <div class="badge">MAIS POPULAR</div>
-        <div class="pname">Trimestral</div>
-        <div class="pdesc">Economize e acelere seus estudos.</div>
+        <div class="pname">Plano 90 dias – Edital aberto</div>
+        <div class="pdesc">Economize 2 meses e acelere seus estudos.</div>
+        <div class="price-old">de R$149,90 por</div>
         <div class="price-main">R$ 39,90<small>/mês</small></div>
-        <div class="price-sub">3× de R$ 39,90 · R$ 119,90 a cada 3 meses</div>
+        <div class="price-sub">Cobrado R$ 119,00 a cada 3 meses<br>Apenas R$ 1,33 / dia</div>
         <ul>
-          <li><span class="ck">✔</span>10 planos de estudo</li>
-          <li><span class="ck">✔</span>10 raio-x do edital</li>
-          <li><span class="ck">✔</span>Tutor IA ilimitado</li>
-          <li><span class="ck">✔</span>Banco de questões ampliado</li>
-          <li><span class="ck">✔</span>Flashcards ilimitados</li>
+          <li><span class="ck">✔</span>10 Planos + Cronograma de Estudo IA / Mês</li>
+          <li><span class="ck">✔</span>10 Raio-x do Edital e das provas anteriores</li>
+          <li><span class="ck">✔</span>Tutor Gemini Pro ilimitado</li>
+          <li><span class="ck">✔</span>Métricas de Desempenho</li>
+          <li><span class="ck">✔</span>Banco de Questões</li>
+          <li><span class="ck">✔</span>1000 pedidos de provas anteriores</li>
+          <li><span class="ck">✔</span>Flash Cards com IA</li>
+          <li><span class="ck">✔</span>Até 7 questões por Mini-simulados</li>
+          <li><span class="ck">✔</span>20 Mini-simulados / dia</li>
         </ul>
-        <a href="https://pay.cakto.com.br/3e2izku" class="pbtn solid checkout-link" data-plan="trimestral" data-value="119.90" data-currency="BRL">Quero começar para a SEDES DF</a>
+        <a href="https://pay.cakto.com.br/3e2izku" class="pbtn light checkout-link" data-plan="90-dias-edital-aberto" data-value="119.00" data-currency="BRL">Quero ser Aprovado</a>
       </div>
 
       <!-- ANUAL -->
-      <div class="plan">
-        <div class="pname">Anual</div>
-        <div class="pdesc">Melhor custo-benefício para a reta longa.</div>
-        <div class="price-main">R$ 17,58<small>/mês</small></div>
-        <div class="price-sub">ou à vista R$ 169,00 a cada 12 meses</div>
+      <div class="plan elite">
+        <div class="badge">ILIMITADO</div>
+        <div class="pname">Concurseiro de Elite – 12 meses</div>
+        <div class="pdesc">Melhor custo-benefício para aprovação.</div>
+        <div class="price-old">de R$249,00 por</div>
+        <div class="price-main">R$ 19,90<small>/mês</small></div>
+        <div class="price-sub">Cobrado R$ 197,00 por ano<br>Apenas R$ 0,53 / dia</div>
         <ul>
-          <li><span class="ck">✔</span>Planos e raio-x <b>ilimitados</b></li>
-          <li><span class="ck">✔</span>Tutor IA <b>ilimitado</b></li>
-          <li><span class="ck">✔</span>Banco de questões <b>ilimitado</b></li>
-          <li><span class="ck">✔</span>Flashcards <b>ilimitados</b></li>
-          <li><span class="ck">✔</span>Melhor preço por mês</li>
+          <li><span class="ck">✔</span>Planos + Cronograma de Estudo IA – ilimitado</li>
+          <li><span class="ck">✔</span>Raio-x do Edital e das provas anteriores – ilimitado</li>
+          <li><span class="ck">✔</span>Tutor Gemini Pro ilimitado</li>
+          <li><span class="ck">✔</span>Métricas de Desempenho</li>
+          <li><span class="ck">✔</span>Banco de Questões</li>
+          <li><span class="ck">✔</span>Pedidos de provas anteriores – ilimitados</li>
+          <li><span class="ck">✔</span>Flash Cards com IA – ilimitado</li>
+          <li><span class="ck">✔</span>Até 15 questões por Mini-simulados</li>
+          <li><span class="ck">✔</span>Gere Mini-simulados – ilimitado / dia</li>
         </ul>
-        <a href="https://pay.cakto.com.br/uzjrp8z" class="pbtn ghost checkout-link" data-plan="anual" data-value="169.00" data-currency="BRL">Garantir o plano anual</a>
+        <a href="https://pay.cakto.com.br/uzjrp8z" class="pbtn solid checkout-link" data-plan="concurseiro-elite-12-meses" data-value="197.00" data-currency="BRL">Quero ser Aprovado</a>
       </div>
 
     </div>
