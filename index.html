@@ -198,14 +198,8 @@ section{position:relative}
 .step p{color:var(--ink-500);font-size:.94rem}
 
 /* ---- Prova social ---- */
-.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;max-width:960px;margin:0 auto}
-.review{background:var(--navy-800);border:1px solid var(--line);border-radius:14px;padding:22px}
-.review .quote{font-size:.98rem;color:var(--ink-100);font-style:italic;margin-bottom:16px}
-.review .who{display:flex;align-items:center;gap:12px}
-.review .av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--mint),var(--navy-700));
-  display:flex;align-items:center;justify-content:center;font-family:'Sora';font-weight:700;color:#04140a;font-size:.95rem}
-.review .name{font-family:'Sora';font-weight:700;font-size:.92rem}
-.review .role{font-size:.78rem;color:var(--mint);font-family:'Space Mono'}
+.social-proof{max-width:1040px;margin:0 auto}
+.social-proof img{display:block;width:100%;height:auto;border-radius:18px;box-shadow:0 22px 70px rgba(0,0,0,.32)}
 .social-note{text-align:center;color:var(--ink-500);margin-top:30px;font-size:.95rem}
 
 /* ---- Empilhamento ---- */
@@ -404,19 +398,8 @@ footer .copy{color:var(--ink-500);font-size:.8rem;max-width:600px;margin:0 auto}
   <div class="wrap">
     <span class="tag">Prova social</span>
     <h2>Quem já usou, aprova</h2>
-    <div class="reviews">
-      <div class="review">
-        <p class="quote">"O plano de estudos da IA é surreal. Economizei horas de planejamento."</p>
-        <div class="who"><div class="av">CD</div><div><div class="name">Carla Dias</div><div class="role">Aprovada · TJ-SP</div></div></div>
-      </div>
-      <div class="review">
-        <p class="quote">"Fui direto ao ponto. Estudei só o que caía."</p>
-        <div class="who"><div class="av">BS</div><div><div class="name">Bruno Silva</div><div class="role">Aprovado · Receita Federal</div></div></div>
-      </div>
-      <div class="review">
-        <p class="quote">"A plataforma se pagou já no primeiro mês de estudo organizado."</p>
-        <div class="who"><div class="av">LC</div><div><div class="name">Letícia Costa</div><div class="role">Aprovada · INSS</div></div></div>
-      </div>
+    <div class="social-proof">
+      <img src="assets/social-proof.svg" alt="Depoimentos de alunos elogiando a DeepStudy em conversas e comentários nas redes sociais" loading="lazy" decoding="async">
     </div>
     <p class="social-note">Candidatos da SEDES DF já estão usando a DeepStudy para organizar a reta final até setembro.</p>
   </div>

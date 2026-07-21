@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1680 920" role="img" aria-labelledby="title desc">
+  <title id="title">Depoimentos de alunos sobre a DeepStudy</title>
+  <desc id="desc">Montagem com prints de conversas e comentários elogiando a ferramenta de estudos.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#101827"/>
+      <stop offset="70%" stop-color="#05070c"/>
+      <stop offset="100%" stop-color="#000"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#141a25"/>
+      <stop offset="100%" stop-color="#0b1018"/>
+    </linearGradient>
+    <linearGradient id="wa" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0b6f49"/>
+      <stop offset="100%" stop-color="#05b977"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity=".45"/>
+    </filter>
+    <style>
+      .txt{font-family:Inter,Arial,sans-serif;fill:#f3f6fb}.muted{fill:#9aa4b2}.small{font-size:22px}.med{font-size:28px}.big{font-size:34px;font-weight:700}.user{font-size:27px;font-weight:800}.heart{fill:#ff174d}.check{fill:#21d58b}.reply{fill:#a9b2bf;font-size:21px}.bubble{fill:#1a262a}.bubble2{fill:url(#wa)}
+    </style>
+  </defs>
+  <rect width="1680" height="920" fill="url(#bg)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="24" y="28" width="535" height="452" rx="48" fill="#06100f" stroke="#323842"/>
+    <path d="M206 40h310a36 36 0 0 1 36 36v28a36 36 0 0 1-36 36H206a36 36 0 0 1-36-36V76a36 36 0 0 1 36-36Z" fill="url(#wa)"/>
+    <text x="190" y="87" class="txt med">Perfeito! Bons estudos!</text><text x="455" y="91" class="txt small" opacity=".75">12:03 ✓✓</text>
+    <rect x="244" y="128" width="95" height="62" rx="30" fill="#202831" opacity=".9"/><text x="263" y="168" class="muted med">Hoje</text>
+    <rect x="45" y="198" width="430" height="188" rx="14" fill="#1a2428"/>
+    <text x="63" y="234" class="txt med">Boa tarde, queria parabenizar,</text>
+    <text x="63" y="268" class="txt med">ferramenta é muuuito boa, ajudou</text>
+    <text x="63" y="302" class="txt med">eu me organizar e começar a ver</text>
+    <text x="63" y="336" class="txt med">evolução. Amei também o suporte,</text>
+    <text x="63" y="370" class="txt med">vcs sao 10!</text><text x="410" y="373" class="muted small">17:08</text>
+    <rect x="36" y="396" width="435" height="62" rx="30" fill="#1a2227"/><text x="85" y="436" class="muted med">Mensagem</text><text x="478" y="436" class="txt med">🎙</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="574" y="28" width="535" height="452" rx="48" fill="url(#card)" stroke="#373d48"/>
+    <circle cx="626" cy="85" r="42" fill="#f73166"/><circle cx="626" cy="85" r="34" fill="#232934"/><text x="610" y="96" class="txt med">👩</text>
+    <text x="678" y="74" class="user txt">daysianemorin</text><text x="827" y="74" class="muted small">30 min 🛳️❤️</text>
+    <text x="678" y="111" class="txt med">Amei, simples e prático. Adiantou</text>
+    <text x="678" y="146" class="txt med">muito minha vida nos estudos</text>
+    <text x="678" y="181" class="txt med">pra Sefaz-SP</text><text x="1044" y="135" class="heart big">●</text>
+    <text x="678" y="216" class="reply">Responder    Ocultar</text><text x="1056" y="177" class="txt small">1</text>
+    <rect x="574" y="232" width="535" height="188" fill="#17212b" opacity=".72"/>
+    <circle cx="670" cy="290" r="31" fill="#ffef18"/><text x="655" y="302" class="txt med">👨</text><text x="715" y="287" class="user txt">@raffaelensina_</text><text x="876" y="287" class="muted small">✓ 24 s · Autor</text>
+    <text x="715" y="325" class="txt med"><tspan fill="#8eb8ff">@daysianemorin</tspan> obrigado pelo</text>
+    <text x="715" y="362" class="txt med">feedback! 🙌🏻🔥</text><text x="715" y="404" class="reply">Responder</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1122" y="28" width="535" height="452" rx="48" fill="url(#card)" stroke="#373d48"/>
+    <circle cx="1176" cy="92" r="42" fill="#fda400"/><circle cx="1176" cy="92" r="34" fill="#ebedf2"/><circle cx="1176" cy="83" r="13" fill="#9aa0aa"/><path d="M1150 117c8-22 44-22 52 0" fill="#9aa0aa"/>
+    <text x="1228" y="82" class="user txt">guilhermefontoro</text><text x="1440" y="82" class="muted small">47 min 🛳️❤️</text>
+    <text x="1228" y="125" class="txt med">Comprei e indico 👏</text><text x="1606" y="128" class="heart big">●</text>
+    <text x="1228" y="166" class="reply">Responder    Ocultar</text><text x="1608" y="210" class="txt small">1</text>
+    <rect x="1122" y="232" width="535" height="188" fill="#17212b" opacity=".72"/>
+    <circle cx="1234" cy="291" r="31" fill="#ffef18"/><text x="1219" y="303" class="txt med">👨</text><text x="1278" y="289" class="user txt">@raffaelensina_</text><text x="1437" y="289" class="muted small">✓ 7 min · Autor</text>
+    <text x="1278" y="328" class="txt med"><tspan fill="#8eb8ff">@guilhermefontoro</tspan> bons estudos</text><text x="1278" y="366" class="txt med">🚀🚀💖</text><text x="1278" y="406" class="reply">Responder</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="24" y="502" width="555" height="402" rx="36" fill="url(#card)" stroke="#373d48"/>
+    <circle cx="82" cy="556" r="39" fill="#ff9e00"/><circle cx="82" cy="556" r="31" fill="#1d3546"/><text x="129" y="545" class="user txt">jesicamarquees</text><text x="280" y="545" class="muted small">4 min 🛳️❤️</text>
+    <text x="129" y="583" class="txt med">Nunca mexi com IA, achei que ia ser</text><text x="129" y="618" class="txt med">difícil, mas com 5 minutos já tava</text><text x="129" y="653" class="txt med">estudando com edital verticalizado,</text><text x="129" y="688" class="txt med">muito show, parabens!</text>
+    <text x="129" y="724" class="reply">Responder     Ocultar</text><text x="526" y="603" class="heart big">●</text><text x="534" y="650" class="txt small">1</text>
+    <rect x="24" y="726" width="555" height="178" fill="#17212b" opacity=".72"/>
+    <circle cx="116" cy="774" r="31" fill="#ffef18"/><text x="101" y="786" class="txt med">👨</text><text x="164" y="772" class="user txt">@raffaelensina_</text><text x="323" y="772" class="muted small">✓ 1 s · Autor</text>
+    <text x="164" y="813" class="txt med"><tspan fill="#8eb8ff">@jesicamarquees</tspan> obrigado pelo</text><text x="164" y="850" class="txt med">feedback! Bons estudos!</text><text x="164" y="885" class="reply">Responder</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="594" y="508" width="575" height="398" rx="36" fill="#06100f" stroke="#323842"/>
+    <rect x="625" y="522" width="465" height="255" rx="14" class="bubble"/>
+    <text x="640" y="558" class="txt med">Te passando o feedback!</text><text x="640" y="592" class="txt med">Tudo certo, a princípio a ferramenta</text><text x="640" y="626" class="txt med">está me ajudando demais a organizar</text><text x="640" y="660" class="txt med">meus estudos e priorizar o que realmente</text><text x="640" y="694" class="txt med">cai na prova. Já consegui otimizar muito</text><text x="640" y="728" class="txt med">meu tempo. Parabéns pelo trabalho! 👊🏻</text><text x="1027" y="764" class="muted small">10:04</text>
+    <path d="M679 792h452l25-30v96a36 36 0 0 1-36 36H679a36 36 0 0 1-36-36v-30a36 36 0 0 1 36-36Z" class="bubble2"/>
+    <text x="693" y="829" class="txt med">Fico feliz que gostou! Bons estudos,</text><text x="693" y="864" class="txt med">conte conosco! 😊😉</text><text x="1050" y="876" class="txt small" opacity=".75">10:06 ✓✓</text>
+  </g>
+</svg>
