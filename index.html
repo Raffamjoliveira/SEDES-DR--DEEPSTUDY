@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DeepStudy AI · SEDES DF 2026 — Cronograma até a prova pela banca Quadrix</title>
-<meta name="description" content="A IA que cruza o edital da SEDES DF com o histórico da Quadrix e monta seu cronograma diário até 06/09/2026. Teste 7 dias grátis.">
+<meta name="description" content="A IA que cruza o edital da SEDES DF com o histórico da Quadrix e monta seu cronograma diário até 06/09/2026.">
 
 <!-- ============ META PIXEL ============ -->
 <script>
@@ -25,8 +25,11 @@
   };
   w.metaTrack=function(eventName,params,eventId){
     var id=eventId||w.metaCreateEventId(eventName.toLowerCase());
-    if(typeof w.fbq==='function'){w.fbq('track',eventName,params||{},{eventID:id});}
-    w.metaBeaconFallback(eventName,id,params||{});
+    if(typeof w.fbq==='function'){
+      w.fbq('track',eventName,params||{},{eventID:id});
+    }else{
+      w.metaBeaconFallback(eventName,id,params||{});
+    }
     return id;
   };
   !function(f,b,e,v,n,t,r){
@@ -51,6 +54,18 @@
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1083649257004430&ev=PageView&noscript=1"/></noscript>
 <!-- ========== FIM META PIXEL ========== -->
+
+
+<!-- ============ VTURB PRELOAD ============ -->
+<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+<link rel="preload" href="https://scripts.converteai.net/8e5b8623-0871-4140-bf63-eaebe572a0e4/players/6a5eb0b9aeb1290ff50a5844/v4/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+<link rel="preload" href="https://cdn.converteai.net/8e5b8623-0871-4140-bf63-eaebe572a0e4/6a5eb090aeb1290ff50a57fe/main.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://license.vturb.com">
+<!-- ========== FIM VTURB PRELOAD ========== -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -166,6 +181,12 @@ section{position:relative}
 .xray-cell.mid{background:var(--navy-800);color:var(--ink-500)}
 .xray-caption{margin-top:18px;font-size:.85rem;color:var(--ink-500);font-family:'Space Mono'}
 
+
+/* ---- VSL ---- */
+.vsl{background:var(--navy-900);padding:22px 0 72px}
+.vsl-card{max-width:520px;margin:0 auto;background:var(--navy-800);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,.18)}
+.vsl-card vturb-smartplayer{border-radius:14px;overflow:hidden}
+
 /* ---- 7 passos ---- */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;max-width:960px;margin:0 auto}
 .step{background:var(--navy-800);border:1px solid var(--line);border-radius:14px;padding:24px;position:relative;transition:.2s}
@@ -176,15 +197,9 @@ section{position:relative}
 .step h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
 .step p{color:var(--ink-500);font-size:.94rem}
 
-/* ---- Prova social ---- */
-.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;max-width:960px;margin:0 auto}
-.review{background:var(--navy-800);border:1px solid var(--line);border-radius:14px;padding:22px}
-.review .quote{font-size:.98rem;color:var(--ink-100);font-style:italic;margin-bottom:16px}
-.review .who{display:flex;align-items:center;gap:12px}
-.review .av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--mint),var(--navy-700));
-  display:flex;align-items:center;justify-content:center;font-family:'Sora';font-weight:700;color:#04140a;font-size:.95rem}
-.review .name{font-family:'Sora';font-weight:700;font-size:.92rem}
-.review .role{font-size:.78rem;color:var(--mint);font-family:'Space Mono'}
+/* ---- Depoimentos ---- */
+.social-proof{max-width:1040px;margin:0 auto}
+.social-proof img{display:block;width:100%;height:auto;border-radius:18px;box-shadow:0 22px 70px rgba(0,0,0,.32)}
 .social-note{text-align:center;color:var(--ink-500);margin-top:30px;font-size:.95rem}
 
 /* ---- Empilhamento ---- */
@@ -211,11 +226,13 @@ section{position:relative}
 .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:980px;margin:0 auto;align-items:stretch}
 .plan{background:var(--navy-800);border:1px solid var(--line);border-radius:18px;padding:30px 26px;display:flex;flex-direction:column;position:relative}
 .plan.pop{border-color:var(--mint);box-shadow:0 0 0 1px var(--mint),0 20px 60px rgba(46,204,113,.18)}
+.plan.elite{background:linear-gradient(180deg,#0b8f65,#087b57);border-color:#10b981;box-shadow:0 20px 70px rgba(16,185,129,.22)}
 .plan .badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);
-  background:var(--mint);color:#04140a;font-family:'Sora';font-weight:700;font-size:.72rem;
+  background:var(--navy-900);color:#fff;border:1px solid var(--mint);font-family:'Sora';font-weight:800;font-size:.72rem;
   padding:5px 16px;border-radius:999px;letter-spacing:.04em}
 .plan .pname{font-family:'Sora';font-weight:700;font-size:1.25rem;margin-bottom:4px}
-.plan .pdesc{color:var(--ink-500);font-size:.88rem;margin-bottom:20px;min-height:38px}
+.plan .pdesc{color:var(--ink-300);font-size:.88rem;margin-bottom:20px;min-height:38px}
+.plan .price-old{font-family:'Sora';font-weight:700;font-size:.86rem;color:var(--red-err);text-decoration:line-through;margin-bottom:2px}
 .plan .price-main{font-family:'Sora';font-weight:800;font-size:2.3rem;line-height:1}
 .plan .price-main small{font-size:.95rem;color:var(--ink-500);font-weight:600}
 .plan .price-sub{font-family:'Space Mono';font-size:.82rem;color:var(--ink-300);margin-top:8px;min-height:20px}
@@ -228,6 +245,8 @@ section{position:relative}
 .plan .pbtn.solid:hover{background:#38e07f}
 .plan .pbtn.ghost{background:transparent;border:1px solid var(--mint);color:var(--mint)}
 .plan .pbtn.ghost:hover{background:rgba(46,204,113,.1)}
+.plan .pbtn.light{background:#fff;color:#087b57}
+.plan .pbtn.light:hover{background:#eef5f1}
 .plans-note{text-align:center;color:var(--ink-500);margin-top:26px;font-size:.92rem}
 
 /* ---- FAQ ---- */
@@ -245,6 +264,23 @@ section{position:relative}
 .close{text-align:center;background:linear-gradient(180deg,var(--navy-900),var(--navy-850));padding:84px 0}
 .close h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;max-width:680px;margin:0 auto 20px}
 .close p{color:var(--ink-300);max-width:560px;margin:0 auto 34px;font-size:1.08rem}
+
+
+/* ---- WhatsApp dúvidas ---- */
+.whatsapp-float{
+  position:fixed;right:20px;bottom:20px;z-index:20;
+  display:flex;align-items:center;gap:10px;
+  background:#25D366;color:#04140a;text-decoration:none;
+  border-radius:999px;padding:10px 14px 10px 12px;
+  font-family:'Sora',sans-serif;font-weight:700;font-size:.86rem;
+  box-shadow:0 10px 30px rgba(37,211,102,.28);transition:.2s;
+}
+.whatsapp-float:hover{transform:translateY(-2px);box-shadow:0 14px 38px rgba(37,211,102,.38)}
+.whatsapp-float svg{width:24px;height:24px;flex-shrink:0;fill:currentColor}
+@media (max-width:560px){
+  .whatsapp-float{right:14px;bottom:14px;padding:10px}
+  .whatsapp-float span{display:none}
+}
 
 /* ---- Footer ---- */
 footer{background:var(--navy-900);border-top:1px solid var(--line);padding:40px 0;text-align:center}
@@ -287,9 +323,9 @@ footer .copy{color:var(--ink-500);font-size:.8rem;max-width:600px;margin:0 auto}
     <span class="eyebrow"><span class="pulse"></span>SEDES DF · BANCA QUADRIX</span>
     <h1>A única IA que já sabe o que cai na prova da <span class="mint">SEDES DF</span> — e monta seu cronograma até o dia da prova.</h1>
     <p class="sub">Envie o edital, receba um plano de estudos diário baseado no padrão da banca Quadrix, com questões, flashcards e tutor de dúvidas 24h.</p>
-    <a href="#planos" class="btn-primary" onclick="fbq('track','InitiateCheckout')">Quero meu cronograma grátis agora</a>
+    <a href="#planos" class="btn-primary">Quero meu cronograma agora</a>
     <div class="reassure">
-      <span>✓ Teste 7 dias grátis</span>
+      <span>✓ Acesso imediato</span>
       <span>✓ Cancela quando quiser</span>
       <span>✓ Sem fidelidade</span>
     </div>
@@ -309,6 +345,17 @@ footer .copy{color:var(--ink-500);font-size:.8rem;max-width:600px;margin:0 auto}
       <div class="pain-card"><span class="x">✖</span>Como encaixar tudo numa rotina que já tem trabalho, casa e cansaço?</div>
     </div>
     <p class="pain-punch">Estudar sem direção é estudar mais e <span class="red">aprender menos</span>.</p>
+  </div>
+</section>
+
+
+<!-- VSL -->
+<section class="vsl" aria-label="Vídeo de apresentação">
+  <div class="wrap">
+    <div class="vsl-card">
+      <vturb-smartplayer id="vid-6a5eb0b9aeb1290ff50a5844" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
+      <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/8e5b8623-0871-4140-bf63-eaebe572a0e4/players/6a5eb0b9aeb1290ff50a5844/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+    </div>
   </div>
 </section>
 
@@ -346,24 +393,12 @@ footer .copy{color:var(--ink-500);font-size:.8rem;max-width:600px;margin:0 auto}
   </div>
 </section>
 
-<!-- PROVA SOCIAL -->
+<!-- DEPOIMENTOS -->
 <section class="sec">
   <div class="wrap">
-    <span class="tag">Prova social</span>
     <h2>Quem já usou, aprova</h2>
-    <div class="reviews">
-      <div class="review">
-        <p class="quote">"O plano de estudos da IA é surreal. Economizei horas de planejamento."</p>
-        <div class="who"><div class="av">CD</div><div><div class="name">Carla Dias</div><div class="role">Aprovada · TJ-SP</div></div></div>
-      </div>
-      <div class="review">
-        <p class="quote">"Fui direto ao ponto. Estudei só o que caía."</p>
-        <div class="who"><div class="av">BS</div><div><div class="name">Bruno Silva</div><div class="role">Aprovado · Receita Federal</div></div></div>
-      </div>
-      <div class="review">
-        <p class="quote">"A plataforma se pagou já no primeiro mês de estudo organizado."</p>
-        <div class="who"><div class="av">LC</div><div><div class="name">Letícia Costa</div><div class="role">Aprovada · INSS</div></div></div>
-      </div>
+    <div class="social-proof">
+      <img src="https://i.postimg.cc/SstcB6n5/Chat-GPT-Image-Jul-21-2026-11-30-58-AM.png" alt="Depoimentos de alunos elogiando a DeepStudy em conversas e comentários nas redes sociais" loading="lazy" decoding="async">
     </div>
     <p class="social-note">Candidatos da SEDES DF já estão usando a DeepStudy para organizar a reta final até setembro.</p>
   </div>
@@ -405,60 +440,77 @@ footer .copy{color:var(--ink-500);font-size:.8rem;max-width:600px;margin:0 auto}
   <div class="wrap">
     <span class="tag">Investimento</span>
     <h2>Escolha seu plano</h2>
-    <p class="lead">Sem multas. Sem fidelidade. Teste 7 dias grátis e cancele quando quiser.</p>
+    <p class="lead">Sem multas. Sem fidelidade. Cancele quando quiser.</p>
     <div class="plans">
 
       <!-- MENSAL -->
       <div class="plan">
-        <div class="pname">Mensal</div>
-        <div class="pdesc">Acesso completo, pague mês a mês.</div>
+        <div class="badge">BÁSICO</div>
+        <div class="pname">Plano Reta Final – 30 Dias</div>
+        <div class="pdesc">Acesso limitado, ideal para revisão rápida do conteúdo total da prova.</div>
+        <div class="price-old">de R$99,90 por</div>
         <div class="price-main">R$ 79,90<small>/mês</small></div>
-        <div class="price-sub">cobrado mensalmente</div>
+        <div class="price-sub">Apenas R$ 2,66 / dia</div>
         <ul>
-          <li><span class="ck">✔</span>5 planos de estudo por mês</li>
-          <li><span class="ck">✔</span>5 raio-x do edital</li>
-          <li><span class="ck">✔</span>Tutor IA ilimitado</li>
-          <li><span class="ck">✔</span>Banco de questões</li>
-          <li><span class="ck">✔</span>Flashcards com IA</li>
+          <li><span class="ck">✔</span>3 Planos + Cronograma de Estudo IA / Mês</li>
+          <li><span class="ck">✔</span>3 Raio-x do Edital e das provas anteriores</li>
+          <li><span class="ck">✔</span>Tutor Gemini Pro ilimitado</li>
+          <li><span class="ck">✔</span>Métricas de Desempenho</li>
+          <li><span class="ck">✔</span>Banco de Questões</li>
+          <li><span class="ck">✔</span>100 pedidos de provas anteriores</li>
+          <li><span class="ck">✔</span>Flash Cards com IA</li>
+          <li><span class="ck">✔</span>Até 3 questões por Mini-simulados</li>
+          <li><span class="ck">✔</span>10 Mini-simulados / dia</li>
         </ul>
-        <a href="https://pay.cakto.com.br/zxrbobe" class="pbtn ghost checkout-link" data-plan="mensal" data-value="79.90" data-currency="BRL">Começar meu plano</a>
+        <a href="https://pay.cakto.com.br/zxrbobe" class="pbtn solid checkout-link" data-plan="reta-final-30-dias" data-value="79.90" data-currency="BRL">Quero ser Aprovado</a>
       </div>
 
       <!-- TRIMESTRAL -->
       <div class="plan pop">
         <div class="badge">MAIS POPULAR</div>
-        <div class="pname">Trimestral</div>
-        <div class="pdesc">Economize e acelere seus estudos.</div>
+        <div class="pname">Plano 90 dias – Edital aberto</div>
+        <div class="pdesc">Economize 2 meses e acelere seus estudos.</div>
+        <div class="price-old">de R$149,90 por</div>
         <div class="price-main">R$ 39,90<small>/mês</small></div>
-        <div class="price-sub">3× de R$ 39,90 · R$ 119,90 a cada 3 meses</div>
+        <div class="price-sub">Cobrado R$ 119,00 a cada 3 meses<br>Apenas R$ 1,33 / dia</div>
         <ul>
-          <li><span class="ck">✔</span>10 planos de estudo</li>
-          <li><span class="ck">✔</span>10 raio-x do edital</li>
-          <li><span class="ck">✔</span>Tutor IA ilimitado</li>
-          <li><span class="ck">✔</span>Banco de questões ampliado</li>
-          <li><span class="ck">✔</span>Flashcards ilimitados</li>
+          <li><span class="ck">✔</span>10 Planos + Cronograma de Estudo IA / Mês</li>
+          <li><span class="ck">✔</span>10 Raio-x do Edital e das provas anteriores</li>
+          <li><span class="ck">✔</span>Tutor Gemini Pro ilimitado</li>
+          <li><span class="ck">✔</span>Métricas de Desempenho</li>
+          <li><span class="ck">✔</span>Banco de Questões</li>
+          <li><span class="ck">✔</span>1000 pedidos de provas anteriores</li>
+          <li><span class="ck">✔</span>Flash Cards com IA</li>
+          <li><span class="ck">✔</span>Até 7 questões por Mini-simulados</li>
+          <li><span class="ck">✔</span>20 Mini-simulados / dia</li>
         </ul>
-        <a href="https://pay.cakto.com.br/3e2izku" class="pbtn solid checkout-link" data-plan="trimestral" data-value="119.90" data-currency="BRL">Quero começar para a SEDES DF</a>
+        <a href="https://pay.cakto.com.br/3e2izku" class="pbtn light checkout-link" data-plan="90-dias-edital-aberto" data-value="119.00" data-currency="BRL">Quero ser Aprovado</a>
       </div>
 
       <!-- ANUAL -->
-      <div class="plan">
-        <div class="pname">Anual</div>
-        <div class="pdesc">Melhor custo-benefício para a reta longa.</div>
-        <div class="price-main">R$ 14,08<small>/mês</small></div>
-        <div class="price-sub">R$ 169 à vista ou 12× de R$ 17,58</div>
+      <div class="plan elite">
+        <div class="badge">ILIMITADO</div>
+        <div class="pname">Concurseiro de Elite – 12 meses</div>
+        <div class="pdesc">Melhor custo-benefício para aprovação.</div>
+        <div class="price-old">de R$249,00 por</div>
+        <div class="price-main">R$ 19,90<small>/mês</small></div>
+        <div class="price-sub">Cobrado R$ 197,00 por ano<br>Apenas R$ 0,53 / dia</div>
         <ul>
-          <li><span class="ck">✔</span>Planos e raio-x <b>ilimitados</b></li>
-          <li><span class="ck">✔</span>Tutor IA <b>ilimitado</b></li>
-          <li><span class="ck">✔</span>Banco de questões <b>ilimitado</b></li>
-          <li><span class="ck">✔</span>Flashcards <b>ilimitados</b></li>
-          <li><span class="ck">✔</span>Melhor preço por mês</li>
+          <li><span class="ck">✔</span>Planos + Cronograma de Estudo IA – ilimitado</li>
+          <li><span class="ck">✔</span>Raio-x do Edital e das provas anteriores – ilimitado</li>
+          <li><span class="ck">✔</span>Tutor Gemini Pro ilimitado</li>
+          <li><span class="ck">✔</span>Métricas de Desempenho</li>
+          <li><span class="ck">✔</span>Banco de Questões</li>
+          <li><span class="ck">✔</span>Pedidos de provas anteriores – ilimitados</li>
+          <li><span class="ck">✔</span>Flash Cards com IA – ilimitado</li>
+          <li><span class="ck">✔</span>Até 15 questões por Mini-simulados</li>
+          <li><span class="ck">✔</span>Gere Mini-simulados – ilimitado / dia</li>
         </ul>
-        <a href="https://pay.cakto.com.br/uzjrp8z" class="pbtn ghost checkout-link" data-plan="anual" data-value="169.00" data-currency="BRL">Garantir o plano anual</a>
+        <a href="https://pay.cakto.com.br/uzjrp8z" class="pbtn solid checkout-link" data-plan="concurseiro-elite-12-meses" data-value="197.00" data-currency="BRL">Quero ser Aprovado</a>
       </div>
 
     </div>
-    <p class="plans-note">Teste 7 dias grátis em qualquer plano · Sem cartão preso a fidelidade · Cancele quando quiser</p>
+    <p class="plans-note">Acesso imediato em qualquer plano · Sem cartão preso a fidelidade · Cancele quando quiser</p>
   </div>
 </section>
 
@@ -481,8 +533,16 @@ footer .copy{color:var(--ink-500);font-size:.8rem;max-width:600px;margin:0 auto}
         <div class="faq-a"><p>Não. Funciona direto no navegador do celular ou do computador.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Como funciona a garantia de 7 dias?<span class="chev">▾</span></button>
-        <div class="faq-a"><p>Você testa por 7 dias. Se não gostar, cancela dentro desse prazo sem nenhum custo.</p></div>
+        <button class="faq-q">Posso cancelar quando quiser?<span class="chev">▾</span></button>
+        <div class="faq-a"><p>Sim. Você pode cancelar quando quiser, sem multa e sem fidelidade.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Tenho dificuldade com IA. Vou conseguir usar?<span class="chev">▾</span></button>
+        <div class="faq-a"><p>Sim. A plataforma foi pensada para ser simples e guiada: você envia o edital, escolhe sua rotina e recebe o cronograma pronto para seguir, sem precisar dominar tecnologia.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Como eu acesso?<span class="chev">▾</span></button>
+        <div class="faq-a"><p>Após a efetivação do pagamento, disparamos um email com login, senha + link de suporte para dúvidas.</p></div>
       </div>
     </div>
   </div>
@@ -493,9 +553,15 @@ footer .copy{color:var(--ink-500);font-size:.8rem;max-width:600px;margin:0 auto}
   <div class="wrap">
     <h2>Faltam poucos meses até <span class="mint">06/09/2026</span></h2>
     <p>Quem começa agora com direção chega mais preparado do que quem só decide na reta final.</p>
-    <a href="#planos" class="btn-primary" onclick="fbq('track','InitiateCheckout')">Quero meu cronograma até a prova</a>
+    <a href="#planos" class="btn-primary">Quero meu cronograma até a prova</a>
   </div>
 </section>
+
+
+<a class="whatsapp-float" href="https://wa.me/5511940655102?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20a%20DeepStudy%20SEDES%20DF." target="_blank" rel="noopener" aria-label="Tire dúvidas pelo WhatsApp se precisar">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C8.87 3 3.04 8.74 3.04 15.8c0 2.26.61 4.47 1.76 6.4L3 29l6.98-1.78a13.1 13.1 0 0 0 6.06 1.48c7.17 0 13-5.74 13-12.8S23.21 3 16.04 3Zm0 23.52c-1.91 0-3.78-.5-5.41-1.45l-.39-.23-4.14 1.06 1.1-4.01-.26-.41a10.5 10.5 0 0 1-1.71-5.68c0-5.86 4.85-10.62 10.81-10.62 5.97 0 10.82 4.76 10.82 10.62 0 5.86-4.85 10.72-10.82 10.72Zm5.93-7.96c-.33-.16-1.93-.94-2.23-1.04-.3-.11-.52-.16-.74.16-.22.32-.85 1.04-1.04 1.25-.19.21-.38.24-.71.08-.33-.16-1.38-.5-2.63-1.6-.97-.85-1.63-1.9-1.82-2.22-.19-.32-.02-.5.14-.65.15-.14.33-.37.49-.56.16-.19.22-.32.33-.53.11-.21.05-.4-.03-.56-.08-.16-.74-1.76-1.01-2.41-.27-.63-.54-.54-.74-.55h-.63c-.22 0-.57.08-.87.4-.3.32-1.14 1.1-1.14 2.68s1.17 3.11 1.33 3.32c.16.21 2.3 3.45 5.58 4.84.78.33 1.39.53 1.86.68.78.24 1.49.21 2.05.13.63-.09 1.93-.78 2.2-1.53.27-.75.27-1.39.19-1.53-.08-.13-.3-.21-.63-.37Z"/></svg>
+  <span>Tire Dúvidas se precisar</span>
+</a>
 
 <!-- FOOTER -->
 <footer>
@@ -557,8 +623,11 @@ document.querySelectorAll('.faq-q').forEach(function(btn){
   function trackMeta(eventName,params,eventId){
     ensureMetaPixel();
     var id=eventId||createEventId(eventName.toLowerCase());
-    if(typeof w.fbq==='function'){w.fbq('track',eventName,params||{},{eventID:id});}
-    beaconFallback(eventName,id,params||{});
+    if(typeof w.fbq==='function'){
+      w.fbq('track',eventName,params||{},{eventID:id});
+    }else{
+      beaconFallback(eventName,id,params||{});
+    }
     return id;
   }
   function getCheckoutParams(link){
