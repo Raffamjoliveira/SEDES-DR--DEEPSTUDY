@@ -1,672 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DeepStudy AI · SEDES DF 2026 — Cronograma até a prova pela banca Quadrix</title>
-<meta name="description" content="A IA que cruza o edital da SEDES DF com o histórico da Quadrix e monta seu cronograma diário até 06/09/2026.">
-
-<!-- ============ META PIXEL ============ -->
-<script>
-(function(w,d,s,u){
-  var pixelId='1083649257004430';
-  var pageViewEventId='pv-'+Date.now()+'-'+Math.random().toString(36).slice(2);
-  w.metaPixelId=pixelId;
-  w.metaPageViewEventId=pageViewEventId;
-  w.metaCreateEventId=function(prefix){return (prefix||'evt')+'-'+Date.now()+'-'+Math.random().toString(36).slice(2);};
-  w.metaBeaconFallback=function(eventName,eventId,params){
-    var payload=new URLSearchParams({id:pixelId,ev:eventName,eventID:eventId,dl:w.location.href,rl:d.referrer||'',if:'false',ts:String(Date.now())});
-    Object.keys(params||{}).forEach(function(key){payload.set('cd['+key+']',params[key]);});
-    var url='https://www.facebook.com/tr?'+payload.toString();
-    if(navigator.sendBeacon&&navigator.sendBeacon(url)){return;}
-    var img=new Image(1,1);
-    img.style.display='none';
-    img.src=url;
-  };
-  w.metaTrack=function(eventName,params,eventId){
-    var id=eventId||w.metaCreateEventId(eventName.toLowerCase());
-    if(typeof w.fbq==='function'){
-      w.fbq('track',eventName,params||{},{eventID:id});
-    }else{
-      w.metaBeaconFallback(eventName,id,params||{});
-    }
-    return id;
-  };
-  !function(f,b,e,v,n,t,r){
-    if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments);};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
-    r=b.getElementsByTagName(e)[0];r.parentNode.insertBefore(t,r);
-  }(w,d,s,u);
-  fbq('init',pixelId);
-  fbq('track','PageView',{},{eventID:pageViewEventId});
-  setTimeout(function(){
-    var found=false;
-    if(w.performance&&typeof w.performance.getEntriesByType==='function'){
-      found=w.performance.getEntriesByType('resource').some(function(entry){
-        return entry.name.indexOf('facebook.com/tr')!==-1&&entry.name.indexOf('ev=PageView')!==-1;
-      });
-    }
-    if(!found){w.metaBeaconFallback('PageView',pageViewEventId,{});}
-  },1500);
-})(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1083649257004430&ev=PageView&noscript=1"/></noscript>
-<!-- ========== FIM META PIXEL ========== -->
-
-
-<!-- ============ VTURB PRELOAD ============ -->
-<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
-<link rel="preload" href="https://scripts.converteai.net/8e5b8623-0871-4140-bf63-eaebe572a0e4/players/6a5eb0b9aeb1290ff50a5844/v4/player.js" as="script">
-<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
-<link rel="preload" href="https://cdn.converteai.net/8e5b8623-0871-4140-bf63-eaebe572a0e4/6a5eb090aeb1290ff50a57fe/main.m3u8" as="fetch">
-<link rel="dns-prefetch" href="https://cdn.converteai.net">
-<link rel="dns-prefetch" href="https://scripts.converteai.net">
-<link rel="dns-prefetch" href="https://images.converteai.net">
-<link rel="dns-prefetch" href="https://license.vturb.com">
-<!-- ========== FIM VTURB PRELOAD ========== -->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --navy-900:#0B1220;
-  --navy-850:#0F1826;
-  --navy-800:#131C2E;
-  --navy-700:#1B2740;
-  --mint:#2ECC71;
-  --mint-dim:#25a35b;
-  --red-err:#E5484D;
-  --ink-100:#E8EDF4;
-  --ink-300:#B7C2D4;
-  --ink-500:#8A97AB;
-  --line:rgba(255,255,255,.08);
-  --maxw:1080px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  background:var(--navy-900);
-  color:var(--ink-100);
-  font-family:'Inter',system-ui,sans-serif;
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
-h1,h2,h3,.display{font-family:'Sora',sans-serif;line-height:1.12;letter-spacing:-.02em}
-.mono{font-family:'Space Mono',monospace}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
-.mint{color:var(--mint)}
-.red{color:var(--red-err)}
-a{color:inherit}
-
-/* ---- Signature: grade Certo/Errado Quadrix ---- */
-.quadrix-grid{
-  position:absolute;inset:0;z-index:0;pointer-events:none;
-  background-image:
-    linear-gradient(var(--line) 1px,transparent 1px),
-    linear-gradient(90deg,var(--line) 1px,transparent 1px);
-  background-size:52px 52px;
-  mask-image:radial-gradient(ellipse 80% 70% at 50% 0%,#000 30%,transparent 75%);
-  -webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 0%,#000 30%,transparent 75%);
-  opacity:.6;
-}
-
-/* ---- Urgência ---- */
-.urgency{
-  background:linear-gradient(90deg,var(--mint-dim),var(--mint));
-  color:#04140a;text-align:center;font-weight:700;
-  font-size:.86rem;padding:9px 16px;letter-spacing:.01em;
-}
-.urgency .mono{font-weight:700}
-
-/* ---- Nav ---- */
-.nav{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;
-  padding:20px 22px;max-width:var(--maxw);margin:0 auto}
-.brand{display:flex;align-items:center;gap:9px;font-family:'Sora';font-weight:800;font-size:1.15rem}
-.brand svg{width:26px;height:26px}
-.brand .dot{color:var(--mint)}
-.nav-cta{background:var(--mint);color:#04140a;font-weight:700;font-family:'Sora';
-  padding:10px 18px;border-radius:10px;text-decoration:none;font-size:.9rem;transition:.2s}
-.nav-cta:hover{background:#38e07f;transform:translateY(-1px)}
-
-/* ---- Hero ---- */
-.hero{position:relative;overflow:hidden;padding:56px 0 72px;text-align:center}
-.hero .wrap{position:relative;z-index:2}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;
-  background:rgba(46,204,113,.1);border:1px solid rgba(46,204,113,.3);
-  color:var(--mint);font-weight:600;font-size:.8rem;padding:6px 14px;border-radius:999px;
-  margin-bottom:26px;font-family:'Space Mono'}
-.eyebrow .pulse{width:7px;height:7px;border-radius:50%;background:var(--mint);
-  box-shadow:0 0 0 0 rgba(46,204,113,.6);animation:pulse 2s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(46,204,113,0)}100%{box-shadow:0 0 0 0 rgba(46,204,113,0)}}
-.hero h1{font-size:clamp(2.1rem,5.4vw,3.5rem);font-weight:800;max-width:900px;margin:0 auto 22px}
-.hero p.sub{font-size:clamp(1rem,2vw,1.18rem);color:var(--ink-300);max-width:640px;margin:0 auto 34px}
-.btn-primary{display:inline-block;background:var(--mint);color:#04140a;font-family:'Sora';font-weight:700;
-  font-size:1.05rem;padding:16px 34px;border-radius:12px;text-decoration:none;
-  box-shadow:0 8px 30px rgba(46,204,113,.28);transition:.2s}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 38px rgba(46,204,113,.4)}
-.reassure{margin-top:16px;font-size:.86rem;color:var(--ink-500);display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.reassure span{display:inline-flex;align-items:center;gap:6px}
-
-/* ---- Section base ---- */
-section{position:relative}
-.sec{padding:72px 0}
-.sec-alt{background:var(--navy-850)}
-.tag{font-family:'Space Mono';font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--mint);font-weight:700;margin-bottom:14px;display:block;text-align:center}
-.sec h2{font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:800;text-align:center;max-width:760px;margin:0 auto 16px}
-.sec .lead{text-align:center;color:var(--ink-300);max-width:640px;margin:0 auto 44px;font-size:1.05rem}
-
-/* ---- Dor ---- */
-.pain-lead{font-size:1.12rem;color:var(--ink-300);max-width:720px;margin:0 auto 30px;text-align:center}
-.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;max-width:900px;margin:0 auto}
-.pain-card{background:var(--navy-800);border:1px solid var(--line);border-left:3px solid var(--red-err);
-  border-radius:12px;padding:20px 22px}
-.pain-card .x{color:var(--red-err);font-weight:700;font-size:1.1rem;margin-right:8px}
-.pain-punch{text-align:center;font-family:'Sora';font-weight:700;font-size:1.3rem;margin-top:36px;max-width:640px;margin-left:auto;margin-right:auto}
-
-/* ---- Virada ---- */
-.turn{background:linear-gradient(180deg,var(--navy-850),var(--navy-900));text-align:center}
-.turn .xray{max-width:820px;margin:0 auto}
-.turn h2 .mint{display:inline}
-.xray-visual{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:38px auto 0;max-width:560px}
-.xray-cell{width:64px;height:44px;border-radius:8px;display:flex;align-items:center;justify-content:center;
-  font-family:'Space Mono';font-weight:700;font-size:.9rem;border:1px solid var(--line)}
-.xray-cell.hi{background:rgba(46,204,113,.14);border-color:rgba(46,204,113,.45);color:var(--mint)}
-.xray-cell.lo{background:rgba(229,72,77,.08);border-color:rgba(229,72,77,.3);color:var(--red-err)}
-.xray-cell.mid{background:var(--navy-800);color:var(--ink-500)}
-.xray-caption{margin-top:18px;font-size:.85rem;color:var(--ink-500);font-family:'Space Mono'}
-
-
-/* ---- VSL ---- */
-.vsl{background:var(--navy-900);padding:22px 0 72px}
-.vsl-card{max-width:520px;margin:0 auto;background:var(--navy-800);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,.18)}
-.vsl-card vturb-smartplayer{border-radius:14px;overflow:hidden}
-
-/* ---- 7 passos ---- */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;max-width:960px;margin:0 auto}
-.step{background:var(--navy-800);border:1px solid var(--line);border-radius:14px;padding:24px;position:relative;transition:.2s}
-.step:hover{border-color:rgba(46,204,113,.35);transform:translateY(-3px)}
-.step .num{font-family:'Space Mono';font-weight:700;font-size:.8rem;color:var(--mint);
-  border:1px solid rgba(46,204,113,.35);border-radius:7px;width:34px;height:34px;
-  display:flex;align-items:center;justify-content:center;margin-bottom:14px}
-.step h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
-.step p{color:var(--ink-500);font-size:.94rem}
-
-/* ---- Depoimentos ---- */
-.social-proof{max-width:1040px;margin:0 auto}
-.social-proof img{display:block;width:100%;height:auto;border-radius:18px;box-shadow:0 22px 70px rgba(0,0,0,.32)}
-.social-note{text-align:center;color:var(--ink-500);margin-top:30px;font-size:.95rem}
-
-/* ---- Empilhamento ---- */
-.stack{max-width:600px;margin:0 auto;background:var(--navy-800);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.stack-row{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-bottom:1px solid var(--line)}
-.stack-row .lbl{display:flex;align-items:center;gap:10px;font-size:.98rem}
-.stack-row .lbl .ic{color:var(--mint)}
-.stack-row .val{font-family:'Space Mono';color:var(--ink-300)}
-.stack-total{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;background:var(--navy-700)}
-.stack-total .lbl{font-family:'Sora';font-weight:700;font-size:1.05rem}
-.stack-total .val{font-family:'Sora';font-weight:800;font-size:1.4rem;color:var(--red-err);text-decoration:line-through}
-.stack-punch{text-align:center;font-family:'Sora';font-weight:700;font-size:1.25rem;margin-top:28px}
-.stack-punch .mint{border-bottom:2px solid var(--mint)}
-
-/* ---- Custo de oportunidade ---- */
-.cost-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:820px;margin:0 auto}
-.cost-card{background:var(--navy-800);border:1px solid var(--line);border-radius:14px;padding:26px;text-align:center}
-.cost-card .period{font-family:'Space Mono';font-size:.82rem;color:var(--ink-500);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
-.cost-card .amount{font-family:'Sora';font-weight:800;font-size:1.9rem;color:var(--red-err)}
-.cost-foot{text-align:center;color:var(--ink-300);max-width:640px;margin:34px auto 0;font-size:1.02rem}
-.cost-disclaimer{text-align:center;color:var(--ink-500);font-size:.78rem;max-width:640px;margin:16px auto 0;font-style:italic}
-
-/* ---- Planos ---- */
-.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:980px;margin:0 auto;align-items:stretch}
-.plan{background:var(--navy-800);border:1px solid var(--line);border-radius:18px;padding:30px 26px;display:flex;flex-direction:column;position:relative}
-.plan.pop{border-color:var(--mint);box-shadow:0 0 0 1px var(--mint),0 20px 60px rgba(46,204,113,.18)}
-.plan.elite{background:linear-gradient(180deg,#0b8f65,#087b57);border-color:#10b981;box-shadow:0 20px 70px rgba(16,185,129,.22)}
-.plan .badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);
-  background:var(--navy-900);color:#fff;border:1px solid var(--mint);font-family:'Sora';font-weight:800;font-size:.72rem;
-  padding:5px 16px;border-radius:999px;letter-spacing:.04em}
-.plan .pname{font-family:'Sora';font-weight:700;font-size:1.25rem;margin-bottom:4px}
-.plan .pdesc{color:var(--ink-300);font-size:.88rem;margin-bottom:20px;min-height:38px}
-.plan .price-old{font-family:'Sora';font-weight:700;font-size:.86rem;color:var(--red-err);text-decoration:line-through;margin-bottom:2px}
-.plan .price-main{font-family:'Sora';font-weight:800;font-size:2.3rem;line-height:1}
-.plan .price-main small{font-size:.95rem;color:var(--ink-500);font-weight:600}
-.plan .price-sub{font-family:'Space Mono';font-size:.82rem;color:var(--ink-300);margin-top:8px;min-height:20px}
-.plan ul{list-style:none;margin:22px 0;flex-grow:1}
-.plan li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font-size:.92rem;color:var(--ink-300)}
-.plan li .ck{color:var(--mint);flex-shrink:0;margin-top:3px}
-.plan li b{color:var(--ink-100)}
-.plan .pbtn{display:block;text-align:center;padding:14px;border-radius:11px;font-family:'Sora';font-weight:700;text-decoration:none;transition:.2s}
-.plan .pbtn.solid{background:var(--mint);color:#04140a}
-.plan .pbtn.solid:hover{background:#38e07f}
-.plan .pbtn.ghost{background:transparent;border:1px solid var(--mint);color:var(--mint)}
-.plan .pbtn.ghost:hover{background:rgba(46,204,113,.1)}
-.plan .pbtn.light{background:#fff;color:#087b57}
-.plan .pbtn.light:hover{background:#eef5f1}
-.plans-note{text-align:center;color:var(--ink-500);margin-top:26px;font-size:.92rem}
-
-/* ---- FAQ ---- */
-.faq{max-width:720px;margin:0 auto}
-.faq-item{background:var(--navy-800);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
-.faq-q{width:100%;text-align:left;background:none;border:none;color:var(--ink-100);
-  font-family:'Sora';font-weight:600;font-size:1rem;padding:18px 22px;cursor:pointer;
-  display:flex;justify-content:space-between;align-items:center;gap:12px}
-.faq-q .chev{transition:.25s;flex-shrink:0;color:var(--mint)}
-.faq-item.open .chev{transform:rotate(180deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .28s ease;color:var(--ink-300)}
-.faq-a p{padding:0 22px 20px;font-size:.95rem}
-
-/* ---- Fechamento ---- */
-.close{text-align:center;background:linear-gradient(180deg,var(--navy-900),var(--navy-850));padding:84px 0}
-.close h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;max-width:680px;margin:0 auto 20px}
-.close p{color:var(--ink-300);max-width:560px;margin:0 auto 34px;font-size:1.08rem}
-
-
-/* ---- WhatsApp dúvidas ---- */
-.whatsapp-float{
-  position:fixed;right:20px;bottom:20px;z-index:20;
-  display:flex;align-items:center;gap:10px;
-  background:#25D366;color:#04140a;text-decoration:none;
-  border-radius:999px;padding:10px 14px 10px 12px;
-  font-family:'Sora',sans-serif;font-weight:700;font-size:.86rem;
-  box-shadow:0 10px 30px rgba(37,211,102,.28);transition:.2s;
-}
-.whatsapp-float:hover{transform:translateY(-2px);box-shadow:0 14px 38px rgba(37,211,102,.38)}
-.whatsapp-float svg{width:24px;height:24px;flex-shrink:0;fill:currentColor}
-@media (max-width:560px){
-  .whatsapp-float{right:14px;bottom:14px;padding:10px}
-  .whatsapp-float span{display:none}
-}
-
-/* ---- Footer ---- */
-footer{background:var(--navy-900);border-top:1px solid var(--line);padding:40px 0;text-align:center}
-footer .fbrand{display:inline-flex;align-items:center;gap:9px;font-family:'Sora';font-weight:800;margin-bottom:14px}
-footer .fbrand svg{width:22px;height:22px}
-footer .flinks{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;font-size:.86rem}
-footer .flinks a{color:var(--ink-500);text-decoration:none}
-footer .flinks a:hover{color:var(--mint)}
-footer .copy{color:var(--ink-500);font-size:.8rem;max-width:600px;margin:0 auto}
-
-@media (max-width:560px){
-  .sec{padding:56px 0}
-  .hero{padding:40px 0 54px}
-  .xray-cell{width:48px;height:38px;font-size:.78rem}
-  .plan.pop{order:-1}
-}
-@media (prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DeepStudy AI | Preparação inteligente para a Transpetro</title>
+  <meta name="description" content="Plano de estudos, questões e revisões inteligentes para o concurso da Transpetro, com foco no perfil da Cesgranrio.">
+  <meta name="theme-color" content="#020713">
+  <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+  <link rel="preload" href="https://scripts.converteai.net/8e5b8623-0871-4140-bf63-eaebe572a0e4/players/6ac134c4946da87861f65263/v4/player.js" as="script">
+  <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+  <link rel="preload" href="https://cdn.converteai.net/8e5b8623-0871-4140-bf63-eaebe572a0e4/6ac134b9dc76759199e02f1f/main.m3u8" as="fetch">
+  <link rel="dns-prefetch" href="https://cdn.converteai.net">
+  <link rel="dns-prefetch" href="https://scripts.converteai.net">
+  <link rel="dns-prefetch" href="https://images.converteai.net">
+  <link rel="dns-prefetch" href="https://license.vturb.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--deep:#020713;--deep-2:#050d1d;--deep-3:#091426;--ink:#f7f9ff;--muted:#94a2b8;--green:#10c98b;--green-2:#54e6ac;--yellow:#f8d84a;--coral:#ff5f6d;--line:rgba(138,160,194,.13);--card:#081225;--shadow:0 24px 70px rgba(0,3,12,.48);--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--deep);color:var(--ink);font:16px/1.55 'DM Sans',sans-serif;overflow-x:hidden}button,a{font:inherit}a{color:inherit}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:'Manrope',sans-serif;line-height:1.08;letter-spacing:-.035em}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.announcement{padding:9px 20px;text-align:center;background:var(--coral);color:#20100d;font-weight:800;font-size:.78rem;letter-spacing:.02em}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 1rem 'Manrope'}.brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:var(--green);color:var(--deep);box-shadow:0 0 0 5px rgba(66,214,123,.11)}.brand small{display:block;color:var(--muted);font:500 .56rem 'DM Sans';letter-spacing:.13em;text-transform:uppercase}.nav-links{display:flex;gap:30px;align-items:center}.nav-links>a:not(.mini-btn){color:var(--muted);font-size:.85rem;text-decoration:none}.mini-btn,.primary{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--green);color:#04251f;text-decoration:none;border:0;border-radius:10px;font-weight:800;box-shadow:0 10px 30px rgba(66,214,123,.17);transition:.2s}.mini-btn{padding:10px 16px;font-size:.82rem}.primary{padding:15px 24px}.primary:hover,.mini-btn:hover{transform:translateY(-2px);background:#58e68e}.primary.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}.hero{position:relative;padding:74px 0 54px;text-align:center;isolation:isolate}.hero:before{content:'';position:absolute;z-index:-1;width:780px;height:540px;left:50%;top:-80px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(66,214,123,.15),transparent 68%);pointer-events:none}.route{position:absolute;z-index:-1;inset:0;opacity:.12;background-image:linear-gradient(30deg,transparent 48.5%,var(--green) 49%,var(--green) 51%,transparent 51.5%);background-size:130px 76px;mask-image:linear-gradient(to bottom,#000,transparent 90%)}.pill{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border:1px solid rgba(255,201,52,.25);border-radius:999px;background:rgba(255,201,52,.08);color:var(--yellow);font-size:.73rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.pill-dot{width:7px;height:7px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 6px rgba(255,201,52,.1)}.hero h1{max-width:860px;margin:23px auto 18px;font-size:clamp(2.5rem,6vw,5.2rem)}.hero h1 em{color:var(--green);font-style:normal}.hero-copy{max-width:650px;margin:0 auto 30px;color:var(--muted);font-size:1.07rem}.hero-actions{display:flex;justify-content:center;gap:11px;flex-wrap:wrap}.hero-note{margin:14px 0 0;color:#78938b;font-size:.78rem}.ticker{border-block:1px solid var(--line);background:#040b19;overflow:hidden}.ticker-track{display:flex;gap:35px;justify-content:center;white-space:nowrap;padding:13px;color:#739087;font-weight:800;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}.ticker-track b{color:var(--green)}
+    .section{padding:88px 0}.section.alt{background:#040b19}.section.soft{background:#071020;color:var(--ink)}.eyebrow{display:block;margin-bottom:13px;text-align:center;color:var(--green);font-weight:800;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase}.soft .eyebrow{color:var(--green)}.title{max-width:760px;margin:0 auto 14px;text-align:center;font-size:clamp(1.85rem,4vw,3rem)}.lead{max-width:650px;margin:0 auto 42px;text-align:center;color:var(--muted)}.soft .lead{color:var(--muted)}.proof-grid,.feature-grid,.fit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.quote{position:relative;padding:25px;background:var(--card);border:1px solid var(--line);border-radius:16px}.stars{color:var(--yellow);letter-spacing:2px;font-size:.85rem}.quote p{margin:13px 0 18px;color:#d6e0dc;font-size:.92rem}.person{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.76rem}.avatar{display:grid;place-items:center;width:35px;height:35px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--yellow));color:var(--deep);font-weight:900}.callout{margin:22px auto 0;padding:16px 20px;max-width:880px;text-align:center;border:1px solid rgba(255,201,52,.18);border-radius:13px;background:rgba(255,201,52,.06);color:var(--yellow);font-weight:700;font-size:.86rem}
+    .report{margin:46px auto 0;max-width:900px;background:#081326;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}.report-bar{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line);color:var(--muted);font-size:.75rem}.dots{display:flex;gap:6px}.dots i{display:block;width:8px;height:8px;border-radius:50%;background:#45635c}.dots i:first-child{background:var(--coral)}.report-body{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;padding:28px}.report-copy{text-align:left}.report-copy h3{font-size:1.55rem;margin-bottom:10px}.report-copy p{color:var(--muted);font-size:.91rem}.subject{margin-top:17px}.subject-head{display:flex;justify-content:space-between;margin-bottom:7px;font-size:.76rem}.bar{height:7px;border-radius:10px;background:#132239;overflow:hidden}.bar i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--green),var(--green-2))}.radar{position:relative;display:grid;place-items:center;min-height:260px;background:radial-gradient(circle,rgba(66,214,123,.08) 0 2px,transparent 3px),repeating-radial-gradient(circle,transparent 0 34px,rgba(255,255,255,.07) 35px 36px);border-radius:14px}.radar svg{width:80%;height:80%}.radar-tag{position:absolute;right:13px;top:13px;padding:5px 8px;background:rgba(66,214,123,.12);border-radius:6px;color:var(--green);font-size:.65rem;font-weight:800}
+    .feature{padding:25px;border:1px solid var(--line);background:#0a1528;border-radius:15px;box-shadow:0 10px 30px rgba(0,3,12,.2)}.icon{display:grid;place-items:center;width:40px;height:40px;margin-bottom:18px;border-radius:11px;background:rgba(16,201,139,.12);color:var(--green);font-size:1.1rem}.feature:nth-child(2) .icon{background:rgba(83,103,255,.12);color:#8491ff}.feature:nth-child(3) .icon{background:rgba(171,86,255,.12);color:#bc82ff}.feature h3{font-size:1rem;margin-bottom:9px}.feature p{margin:0;color:var(--muted);font-size:.83rem}.audience{background:#071020}.audience-title{display:flex;justify-content:center;align-items:center;gap:10px;margin:0 auto 45px;font-size:clamp(1.75rem,4vw,2.5rem)}.fit-card{min-height:255px;padding:30px;border-radius:24px;background:#0a1427;border:1px solid #213049}.fit-card .fit-icon{display:grid;place-items:center;width:52px;height:52px;margin-bottom:24px;border-radius:14px;background:rgba(16,201,139,.11);color:var(--green);font-size:1.3rem}.fit-card:nth-child(2) .fit-icon{background:rgba(63,119,255,.15);color:#5da1ff}.fit-card:nth-child(3) .fit-icon{background:rgba(154,68,255,.18);color:#bb7aff}.fit-card h3{margin-bottom:13px;text-align:center;font-size:1.05rem}.fit-card p{margin:0;color:#94afd1;font-size:.87rem}.not-fit{background:#020713}.not-fit .fit-grid{max-width:960px;margin:auto}.not-fit .fit-card{display:grid;place-items:center;align-content:center;min-height:168px;padding:25px;text-align:center}.fit-card .x{display:block;margin-bottom:13px;color:#ff5170;font-size:2.6rem;line-height:1;font-weight:700}.not-fit .fit-card h3{margin:0;max-width:235px}
+    .compare{display:grid;grid-template-columns:1fr 1fr;max-width:860px;margin:auto;border:1px solid var(--line);border-radius:18px;overflow:hidden}.compare>div{padding:30px}.compare>div:first-child{background:#071020}.compare>div:last-child{background:linear-gradient(145deg,#087b5c,#0aa875)}.compare h3{font-size:1rem}.compare ul,.plan ul,.summary{list-style:none;padding:0;margin:20px 0 0}.compare li,.plan li,.summary li{position:relative;padding:7px 0 7px 24px;font-size:.86rem;color:#b8c9c3}.compare li:before,.plan li:before,.summary li:before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:900}.compare>div:last-child li{color:#effff6}.compare>div:last-child li:before{color:var(--yellow)}
+    .value-box{max-width:680px;margin:auto;border-radius:18px;background:#081326;border:1px solid var(--line);overflow:hidden;box-shadow:var(--shadow)}.value-row{display:flex;justify-content:space-between;padding:16px 23px;border-bottom:1px solid var(--line);font-size:.88rem}.value-row span:first-child:before{content:'↗';margin-right:10px;color:var(--green)}.value-total{display:flex;justify-content:space-between;padding:19px 23px;background:#030a17;font-weight:800}.value-total strong{color:var(--coral);text-decoration:line-through}.saving{text-align:center;color:var(--yellow);font-weight:800;margin:18px 0 0}
+    .plans{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;align-items:stretch;max-width:760px;margin:auto}.offer-faq{max-width:900px;margin:0 auto 48px;border:1px solid #22334a;border-radius:16px;background:#0a1528;overflow:hidden}.offer-faq summary{display:flex;align-items:center;gap:14px;padding:18px 22px;cursor:pointer;list-style:none;font:700 .96rem 'Manrope';outline:none}.offer-faq summary::-webkit-details-marker{display:none}.offer-faq summary:before{content:'?';display:grid;place-items:center;flex:0 0 37px;height:37px;border-radius:10px;background:rgba(16,201,139,.11);color:var(--green);font-weight:900}.offer-faq summary:after{content:'⌄';margin-left:auto;color:var(--muted);font-size:1.2rem;transition:.2s}.offer-faq[open] summary:after{transform:rotate(180deg)}.offer-answer{padding:0 73px 20px;color:var(--muted);font-size:.9rem}.offer-answer p{margin:0 0 10px}.offer-answer p:last-child{margin:0}.offer-answer strong{color:var(--ink)}.plan{position:relative;display:flex;flex-direction:column;padding:28px 24px;border:1px solid var(--line);border-radius:18px;background:var(--card)}.plan.featured{background:linear-gradient(155deg,#0b9769,#087453);border-color:#45d68c;transform:translateY(-8px);box-shadow:0 22px 60px rgba(7,87,61,.32)}.badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);padding:5px 13px;border-radius:20px;background:var(--yellow);color:#3c2e00;font-weight:900;font-size:.64rem;white-space:nowrap}.plan-name{font:800 1.12rem 'Manrope'}.plan-desc{min-height:42px;color:var(--muted);font-size:.78rem}.price-prefix{display:block;color:#8da0ad;font-size:.75rem}.price{font:800 2.25rem 'Manrope';letter-spacing:-.05em}.price small{font:700 .82rem 'DM Sans';letter-spacing:0}.billing{min-height:38px;color:#9eb4dd;font-size:.8rem}.plan ul{flex:1;margin-bottom:36px}.plan li{font-size:.76rem;padding-top:5px;padding-bottom:5px}.plan.featured .plan-desc,.plan.featured .billing,.plan.featured li{color:#e3f9ed}.plan-btn{display:block;padding:13px;text-align:center;border-radius:9px;background:var(--green);color:#02120d;text-decoration:none;font-weight:900;font-size:.82rem}.featured .plan-btn{background:#f7f9ff;color:#075d45}.plan-note{text-align:center;color:var(--muted);font-size:.76rem;margin:24px 0 0}
+    .showcase{max-width:980px;margin:38px auto 0;padding:10px;border:1px solid var(--line);border-radius:20px;background:#081225;box-shadow:var(--shadow)}.showcase img{display:block;width:100%;height:auto;border-radius:13px}.showcase-note{text-align:center;color:var(--muted);font-size:.78rem;margin:16px 0 0}.hero-big{display:block;margin:22px auto 8px;color:var(--green);font:800 clamp(2rem,5vw,3.65rem)/1 'Manrope',sans-serif;letter-spacing:-.055em;text-shadow:0 0 35px rgba(16,201,139,.18)}.hero-update{display:flex;align-items:center;justify-content:center;gap:8px;width:max-content;max-width:100%;margin:-12px auto 22px;padding:8px 13px;border:1px solid rgba(16,201,139,.22);border-radius:9px;background:rgba(16,201,139,.07);color:#bcebd9;font-size:.79rem;font-weight:700}.hero-update:before{content:'✓';color:var(--green);font-weight:900}
+    .walkthrough{background:#040b19}.carousel{position:relative;max-width:960px;margin:42px auto 0}.carousel-viewport{overflow:hidden;border:1px solid var(--line);border-radius:20px;background:#081225;box-shadow:var(--shadow)}.carousel-track{display:flex;transition:transform .45s cubic-bezier(.22,.61,.36,1)}.carousel-slide{min-width:100%;padding:25px}.slide-top{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:18px}.slide-step{color:var(--green);font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.slide-top h3{max-width:720px;margin:0;font-size:clamp(1.1rem,2.7vw,1.55rem);text-align:right}.carousel-slide img{display:block;width:100%;max-height:570px;object-fit:contain;border-radius:12px;background:#020713}.vturb-wrap{overflow:hidden;border:1px solid #20324d;border-radius:12px;background:#000}.vturb-wrap vturb-smartplayer{display:block!important;width:100%!important;margin:0 auto}.carousel-controls{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:22px}.carousel-arrow{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:#081225;color:var(--ink);font-size:1.15rem;cursor:pointer;transition:.2s}.carousel-arrow:hover{border-color:var(--green);color:var(--green)}.carousel-dots{display:flex;gap:8px}.carousel-dot{width:8px;height:8px;padding:0;border:0;border-radius:20px;background:#314057;cursor:pointer;transition:.2s}.carousel-dot.active{width:25px;background:var(--green)}.carousel-status{margin-top:12px;text-align:center;color:var(--muted);font-size:.72rem}.upgrade-modal{position:fixed;inset:0;z-index:100;display:none;place-items:center;padding:20px;background:rgba(0,6,14,.76);backdrop-filter:blur(7px)}.upgrade-modal.open{display:grid}.upgrade-dialog{position:relative;width:min(590px,100%);max-height:calc(100vh - 40px);overflow:auto;padding:34px;border:1px solid #dce5e9;border-radius:20px;background:#f8fafb;color:#172633;box-shadow:0 30px 90px rgba(0,0,0,.5)}.modal-close{position:absolute;top:17px;right:18px;border:0;background:none;color:#53636d;font-size:1.7rem;cursor:pointer}.modal-kicker{margin-bottom:14px;color:#c77453;font-weight:800;font-size:.82rem}.upgrade-dialog h2{margin-bottom:16px;font-size:clamp(1.7rem,4vw,2.35rem)}.upgrade-dialog h2 strong{color:#096487}.upgrade-dialog h2 .modal-red{color:#e4424f}.upgrade-dialog>p{color:#586873}.upgrade-compare{display:grid;grid-template-columns:1fr 1fr;margin:25px 0;border:1px solid #d6e0e5;border-radius:13px;overflow:hidden;text-align:center}.upgrade-choice{padding:18px 10px}.upgrade-choice+div{border-left:1px solid #d6e0e5;background:#edf3f6}.upgrade-choice small{display:block;color:#7b8992}.upgrade-choice b{display:block;margin:5px 0;font:800 1.7rem 'Manrope';color:#737b80}.upgrade-choice:last-child b{color:#096487}.modal-primary{display:block;padding:15px;border-radius:9px;background:#096487;color:white;text-align:center;text-decoration:none;font-weight:800}.modal-secondary{display:block;margin:15px auto 0;border:0;border-bottom:1px solid currentColor;background:none;color:#596771;cursor:pointer}.summary{display:grid;grid-template-columns:1fr 1fr;gap:0 50px;max-width:720px;margin:32px auto 0}.faq{max-width:760px;margin:auto}.faq-item{border-bottom:1px solid var(--line)}.faq-q{width:100%;display:flex;justify-content:space-between;gap:20px;padding:20px 4px;background:none;border:0;color:var(--ink);text-align:left;font-weight:700;cursor:pointer}.faq-q span{color:var(--green);transition:.2s}.faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}.faq-a p{padding:0 32px 20px 4px;margin:0;color:var(--muted);font-size:.88rem}.faq-item.open .faq-q span{transform:rotate(45deg)}.closing{padding:92px 0;text-align:center;background:linear-gradient(rgba(2,7,19,.91),rgba(2,7,19,.98)),repeating-linear-gradient(135deg,transparent 0 28px,rgba(16,201,139,.1) 29px 31px)}.closing h2{font-size:clamp(2rem,5vw,3.4rem);max-width:760px;margin:0 auto 16px}.closing p{max-width:560px;margin:0 auto 28px;color:var(--muted)}footer{padding:34px 0;border-top:1px solid var(--line)}.footer-inner{display:flex;justify-content:space-between;gap:30px;align-items:center}.footer-copy{color:#769087;font-size:.7rem;max-width:630px}.footer-links{display:flex;gap:17px}.footer-links a{color:var(--muted);font-size:.72rem;text-decoration:none}
+    @media(max-width:800px){.nav-links>a:not(.mini-btn){display:none}.proof-grid,.feature-grid,.fit-grid,.plans{grid-template-columns:1fr}.quote:nth-child(3){display:none}.report-body,.compare{grid-template-columns:1fr}.plans{max-width:520px;margin:auto}.plan.featured{transform:none;order:-1}.section{padding:68px 0}.footer-inner{flex-direction:column;text-align:center}.summary{grid-template-columns:1fr}.hero{padding-top:50px}.ticker-track{justify-content:flex-start;animation:marquee 18s linear infinite}.carousel-slide{padding:14px}.slide-top{align-items:flex-start;flex-direction:column;gap:7px}.slide-top h3{text-align:left}.carousel-slide img{max-height:420px}.offer-faq summary{padding:16px}.offer-answer{padding:0 20px 18px}@keyframes marquee{to{transform:translateX(-50%)}}}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
 </head>
 <body>
+  <div class="announcement">Acesso Vitalício &nbsp;—&nbsp; Prova dia 06/12</div>
+  <nav class="nav wrap" aria-label="Navegação principal">
+    <a class="brand" href="#top"><span class="brand-mark">DS</span><span>DeepStudy <small>Transpetro · Cesgranrio</small></span></a>
+    <div class="nav-links"><a href="#por-dentro">Como funciona</a><a href="#beneficios">Benefícios</a><a href="#faq">Dúvidas</a><a class="mini-btn" href="#planos">Começar agora →</a></div>
+  </nav>
+  <main id="top">
+    <header class="hero"><div class="route"></div><div class="wrap">
+      <span class="pill"><span class="pill-dot"></span> Preparação focada na Cesgranrio</span>
+      <strong class="hero-big">Simulados infinitos</strong>
+      <h1>Chega de perder tempo procurando simulados para a <em>Transpetro.</em></h1>
+      <p class="hero-copy">Gere simulados ilimitados no padrão Cesgranrio, focados no edital da Transpetro e no cargo que você escolheu — com gabarito comentado, revisão e plano de estudos turbo no mesmo lugar.</p>
+      <p class="hero-update">Atualizada para todos os cargos e ênfases dos 4 Editais</p>
+      <div class="hero-actions"><a class="primary" href="#planos">Quero gerar meus simulados →</a><a class="primary ghost" href="#plataforma">Ver a plataforma</a></div>
+      <p class="hero-note">✓ Acesso imediato &nbsp; · &nbsp; ✓ Cancele quando quiser &nbsp; · &nbsp; ✓ Sem fidelidade</p>
+    </div></header>
+    <div class="ticker"><div class="ticker-track"><span><b>•</b> Língua Portuguesa</span><span><b>•</b> Matemática</span><span><b>•</b> Conhecimentos específicos</span><span><b>•</b> Segurança operacional</span><span><b>•</b> Estilo Cesgranrio</span><span><b>•</b> Transpetro</span></div></div>
 
-<!-- URGÊNCIA -->
-<div class="urgency">Edital publicado · Prova em <span class="mono">06/09/2026</span> · Sua preparação começa agora</div>
+    <section class="section alt" id="plataforma"><div class="wrap"><span class="eyebrow">Veja antes de começar</span><h2 class="title">A plataforma por dentro</h2><p class="lead">Uma visão completa da experiência criada para organizar sua preparação para a Transpetro.</p><figure class="showcase"><img src="https://i.postimg.cc/ht6WJ2Zj/Imagem-do-Chat-GPT-2-de-out-de-2026-20-36-17.png" alt="Visão interna da plataforma DeepStudy para o concurso da Transpetro" loading="eager" decoding="async"></figure><p class="showcase-note">Cronograma, simulados, desempenho e revisões reunidos em um único ambiente.</p></div></section>
 
-<!-- NAV -->
-<nav class="nav">
-  <div class="brand">
-    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7l9 5 9-5-9-5z" fill="#2ECC71"/><path d="M3 12l9 5 9-5M3 17l9 5 9-5" stroke="#2ECC71" stroke-width="1.6" fill="none"/></svg>
-    DeepStudy<span class="dot">.AI</span>
-  </div>
-  <a href="#planos" class="nav-cta">Começar agora</a>
-</nav>
+    <section class="section" aria-labelledby="prova-title"><div class="wrap"><span class="eyebrow">Quem usa, recomenda</span><h2 class="title" id="prova-title">Quem treina para a Cesgranrio, chega mais confiante.</h2><p class="lead">Candidatos usam a DeepStudy Transpetro para transformar o edital em prática, revisão e evolução mensurável.</p>
+      <div class="proof-grid"><article class="quote"><div class="stars">★★★★★</div><p>“Eu perdia horas tentando decidir o que estudar. Agora abro o cronograma e já sei exatamente por onde continuar.”</p><div class="person"><span class="avatar">AM</span><span><b>Ana M.</b><br>Candidata</span></div></article><article class="quote"><div class="stars">★★★★★</div><p>“As revisões e questões deixaram minha rotina muito mais objetiva. Finalmente consigo enxergar evolução.”</p><div class="person"><span class="avatar">RL</span><span><b>Rafael L.</b><br>Candidato</span></div></article><article class="quote"><div class="stars">★★★★★</div><p>“A plataforma encaixou o conteúdo no tempo que eu tenho, sem criar uma rotina impossível de cumprir.”</p><div class="person"><span class="avatar">JS</span><span><b>Juliana S.</b><br>Candidata</span></div></article></div>
+      <div class="callout">Você não precisa estudar tudo ao mesmo tempo. Precisa estudar o que importa, na ordem certa.</div>
+    </div></section>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="quadrix-grid"></div>
-  <div class="wrap">
-    <span class="eyebrow"><span class="pulse"></span>SEDES DF · BANCA QUADRIX</span>
-    <h1>A única IA que já sabe o que cai na prova da <span class="mint">SEDES DF</span> — e monta seu cronograma até o dia da prova.</h1>
-    <p class="sub">Envie o edital, receba um plano de estudos diário baseado no padrão da banca Quadrix, com questões, flashcards e tutor de dúvidas 24h.</p>
-    <a href="#planos" class="btn-primary">Quero meu cronograma agora</a>
-    <div class="reassure">
-      <span>✓ Acesso imediato</span>
-      <span>✓ Cancela quando quiser</span>
-      <span>✓ Sem fidelidade</span>
-    </div>
-  </div>
-</header>
+    <section class="section walkthrough" id="por-dentro"><div class="wrap"><span class="eyebrow">Passo a passo</span><h2 class="title">Entenda como funciona por dentro</h2><p class="lead">Da configuração inicial ao plano pronto: avance pelas telas e veja como a IA personaliza sua preparação.</p><div class="carousel" aria-roledescription="carrossel" aria-label="Passo a passo da plataforma"><div class="carousel-viewport"><div class="carousel-track">
+      <article class="carousel-slide" aria-label="1 de 8"><div class="slide-top"><span class="slide-step">Passo 01</span><h3>Adicione as informações do seu concurso</h3></div><img src="https://i.postimg.cc/q7qXNdZ0/Captura-de-tela-2026-10-02-204950.png" alt="Tela para adicionar as informações do concurso da Transpetro" loading="lazy" decoding="async"></article>
+      <article class="carousel-slide" aria-label="2 de 8"><div class="slide-top"><span class="slide-step">Passo 02</span><h3>Informe os dados do edital da Transpetro</h3></div><img src="https://i.postimg.cc/Y9m6xzHQ/Captura-de-tela-2026-10-02-205002.png" alt="Tela de configuração dos dados do edital" loading="lazy" decoding="async"></article>
+      <article class="carousel-slide" aria-label="3 de 8"><div class="slide-top"><span class="slide-step">Passo 03</span><h3>Personalize sua preparação para a Cesgranrio</h3></div><img src="https://i.postimg.cc/gjV3CcrG/Captura-de-tela-2026-10-02-205014.png" alt="Tela de personalização da preparação para a Cesgranrio" loading="lazy" decoding="async"></article>
+      <article class="carousel-slide" aria-label="4 de 8"><div class="slide-top"><span class="slide-step">Passo 04</span><h3>Escolha seu cargo</h3></div><img src="https://i.postimg.cc/NfQXyc5V/Captura-de-tela-2026-10-02-205130.png" alt="Tela para escolher o cargo da Transpetro" loading="lazy" decoding="async"></article>
+      <article class="carousel-slide" aria-label="5 de 8"><div class="slide-top"><span class="slide-step">Passo 05</span><h3>Configure sua disponibilidade real</h3></div><img src="https://i.postimg.cc/d1MkJMbh/Captura-de-tela-2026-10-02-205208.png" alt="Tela para configurar a disponibilidade de estudos" loading="lazy" decoding="async"></article>
+      <article class="carousel-slide" aria-label="6 de 8"><div class="slide-top"><span class="slide-step">Passo 06</span><h3>A IA calcula, com base nas provas anteriores, os assuntos mais prováveis de cair</h3></div><img src="https://i.postimg.cc/prRmnfXh/Captura-de-tela-2026-10-02-205410.png" alt="Análise da IA baseada nas provas anteriores da Cesgranrio" loading="lazy" decoding="async"></article>
+      <article class="carousel-slide" aria-label="7 de 8"><div class="slide-top"><span class="slide-step">Passo 07</span><h3>Ela transforma tudo em um plano personalizado para sua disponibilidade</h3></div><img src="https://i.postimg.cc/wMqBB90x/Captura-de-tela-2026-10-02-205550.png" alt="Plano de estudos personalizado para a disponibilidade do candidato" loading="lazy" decoding="async"></article>
+      <article class="carousel-slide" aria-label="8 de 8"><div class="slide-top"><span class="slide-step">Passo 08</span><h3>Veja a plataforma funcionando na prática</h3></div><div class="vturb-wrap"><vturb-smartplayer id="vid-6ac134c4946da87861f65263" style="display: block; margin: 0 auto; width: 100%;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 56.25% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer></div><script>var vturbScript=document.createElement("script");vturbScript.src="https://scripts.converteai.net/8e5b8623-0871-4140-bf63-eaebe572a0e4/players/6ac134c4946da87861f65263/v4/player.js";vturbScript.async=true;document.head.appendChild(vturbScript);</script></article>
+    </div></div><div class="carousel-controls"><button class="carousel-arrow carousel-prev" type="button" aria-label="Ver etapa anterior">←</button><div class="carousel-dots" aria-label="Escolher etapa"></div><button class="carousel-arrow carousel-next" type="button" aria-label="Ver próxima etapa">→</button></div><p class="carousel-status" aria-live="polite">Etapa <span>1</span> de 8</p></div></div></section>
 
-<!-- DOR -->
-<section class="sec">
-  <div class="wrap">
-    <span class="tag">O problema real</span>
-    <h2>Cada dia sem direção é um dia de vantagem a menos</h2>
-    <p class="pain-lead">O problema não é falta de vontade de estudar. É não saber por onde começar.</p>
-    <div class="pain-grid">
-      <div class="pain-card"><span class="x">✖</span>Qual matéria priorizar primeiro?</div>
-      <div class="pain-card"><span class="x">✖</span>O que realmente cai nas provas da Quadrix?</div>
-      <div class="pain-card"><span class="x">✖</span>Como treinar a discursiva — que é eliminatória para todos os cargos?</div>
-      <div class="pain-card"><span class="x">✖</span>Como encaixar tudo numa rotina que já tem trabalho, casa e cansaço?</div>
-    </div>
-    <p class="pain-punch">Estudar sem direção é estudar mais e <span class="red">aprender menos</span>.</p>
-  </div>
-</section>
+    <section class="section soft" id="beneficios"><div class="wrap"><span class="eyebrow">O que a DeepStudy faz por você</span><h2 class="title">Tudo para dominar a prova da Transpetro em um só lugar.</h2><p class="lead">Simulados Cesgranrio, cronograma para a Transpetro e revisões que acompanham seu desempenho.</p><div class="feature-grid"><article class="feature"><span class="icon">◎</span><h3>Cronograma sob medida</h3><p>Seu cargo na Transpetro e suas horas livres viram um plano diário realista.</p></article><article class="feature"><span class="icon">⌁</span><h3>Simulados ilimitados Cesgranrio</h3><p>Gere novas questões por assunto e entenda cada erro com comentários objetivos.</p></article><article class="feature"><span class="icon">✦</span><h3>Revisão que não deixa esquecer</h3><p>Flashcards e ciclos de revisão aparecem no momento certo da jornada.</p></article></div></div></section>
 
+    <section class="section audience"><div class="wrap"><h2 class="audience-title">🎯 Ideal para quem:</h2><div class="fit-grid"><article class="fit-card"><span class="fit-icon">⌁</span><h3>Concurseiros que já entenderam a chave</h3><p>Já estudam com base no padrão Cesgranrio e buscam uma ferramenta que facilite a criação, seleção e análise de provas da Transpetro.</p></article><article class="fit-card"><span class="fit-icon">✓</span><h3>Quem já tentou de tudo</h3><p>Apostilas, cursinhos, PDFs, videoaulas... e continua travado.</p></article><article class="fit-card"><span class="fit-icon">ϟ</span><h3>Quem quer estudar com estratégia</h3><p>Sem perder tempo com conteúdos que a Cesgranrio não exige.</p></article></div></div></section>
 
-<!-- VSL -->
-<section class="vsl" aria-label="Vídeo de apresentação">
-  <div class="wrap">
-    <div class="vsl-card">
-      <vturb-smartplayer id="vid-6a5eb0b9aeb1290ff50a5844" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
-      <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/8e5b8623-0871-4140-bf63-eaebe572a0e4/players/6a5eb0b9aeb1290ff50a5844/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
-    </div>
-  </div>
-</section>
+    <section class="section not-fit"><div class="wrap"><h2 class="audience-title">🚫 Não é ideal para:</h2><div class="fit-grid"><article class="fit-card"><span class="x">×</span><h3>Quem busca “atalhos milagrosos”.</h3></article><article class="fit-card"><span class="x">×</span><h3>Quem não resolve questões.</h3></article><article class="fit-card"><span class="x">×</span><h3>Quem não quer estudar com consistência.</h3></article></div></div></section>
 
-<!-- VIRADA -->
-<section class="sec turn">
-  <div class="wrap xray">
-    <span class="tag">A virada</span>
-    <h2>Raio-X da banca <span class="mint">Quadrix</span></h2>
-    <p class="lead">A DeepStudy cruza o edital da SEDES DF com o histórico de provas anteriores da Quadrix e te mostra, matéria por matéria, o que tem mais chance de cair. Você para de estudar tudo por igual e passa a estudar com prioridade.</p>
-    <div class="xray-visual">
-      <div class="xray-cell hi">✔</div><div class="xray-cell hi">✔</div><div class="xray-cell mid">·</div>
-      <div class="xray-cell hi">✔</div><div class="xray-cell lo">✖</div><div class="xray-cell hi">✔</div>
-      <div class="xray-cell mid">·</div><div class="xray-cell hi">✔</div><div class="xray-cell hi">✔</div>
-      <div class="xray-cell lo">✖</div><div class="xray-cell hi">✔</div><div class="xray-cell mid">·</div>
-    </div>
-    <p class="xray-caption">alta incidência · baixa incidência · a IA prioriza o que mais cai</p>
-  </div>
-</section>
+    <section class="section"><div class="wrap"><span class="eyebrow">DeepStudy Transpetro x estudo comum</span><h2 class="title">Qual é a diferença da DeepStudy Transpetro?</h2><p class="lead">Não é sobre estudar mais horas. É sobre fazer cada hora trabalhar a seu favor.</p><div class="compare"><div><h3>Estudo sem direção</h3><ul><li>Questões genéricas, fora do perfil Cesgranrio</li><li>Revisões deixadas para depois</li><li>Progresso difícil de medir</li><li>Sensação constante de atraso</li></ul></div><div><h3>Estudo com DeepStudy</h3><ul><li>Simulados focados no edital da Transpetro</li><li>Ciclo de revisão organizado</li><li>Desempenho visível no painel</li><li>Rotina ajustada ao seu tempo</li></ul></div></div></div></section>
 
-<!-- 7 PASSOS -->
-<section class="sec sec-alt">
-  <div class="wrap">
-    <span class="tag">Metodologia</span>
-    <h2>Como funciona, em 7 passos</h2>
-    <p class="lead">Deixe a burocracia do planejamento com a gente e foque apenas em estudar.</p>
-    <div class="steps">
-      <div class="step"><div class="num">01</div><h3>Envie o edital em PDF</h3><p>A IA lê todo o conteúdo programático da SEDES DF.</p></div>
-      <div class="step"><div class="num">02</div><h3>Receba seu plano + cronograma</h3><p>Cronograma diário ajustado à sua rotina até 06/09.</p></div>
-      <div class="step"><div class="num">03</div><h3>Tire dúvidas com o Tutor IA</h3><p>Sobre qualquer tema — da LC 840 à Assistência Social.</p></div>
-      <div class="step"><div class="num">04</div><h3>Pratique no estilo Quadrix</h3><p>Questões gabaritadas e comentadas, no padrão da banca.</p></div>
-      <div class="step"><div class="num">05</div><h3>Revise com flashcards</h3><p>Repetição espaçada pra não esquecer o que já estudou.</p></div>
-      <div class="step"><div class="num">06</div><h3>Acompanhe seu desempenho</h3><p>Veja seus pontos fracos antes da banca ver.</p></div>
-      <div class="step"><div class="num">07</div><h3>Reforço IA 24h na reta final</h3><p>Disponível a qualquer hora, inclusive na véspera da prova.</p></div>
-    </div>
-  </div>
-</section>
+    <section class="section alt"><div class="wrap"><span class="eyebrow">Tudo no mesmo plano</span><h2 class="title">Para que você avance sem colecionar assinaturas.</h2><p class="lead">O que normalmente exigiria várias ferramentas, reunido em uma única experiência.</p><div class="value-box"><div class="value-row"><span>Planejador e cronograma inteligente</span><span>R$ 497,00</span></div><div class="value-row"><span>Raio-X Transpetro + perfil Cesgranrio</span><span>R$ 197,00</span></div><div class="value-row"><span>Simulados ilimitados comentados</span><span>R$ 49,90</span></div><div class="value-row"><span>Flashcards e tutor com IA</span><span>R$ 29,90</span></div><div class="value-total"><span>Valor das soluções separadas</span><strong>R$ 773,80</strong></div></div><p class="saving">Na DeepStudy Transpetro, seus simulados e sua preparação completa começam por menos de R$ 2 por dia.</p></div></section>
 
-<!-- DEPOIMENTOS -->
-<section class="sec">
-  <div class="wrap">
-    <h2>Quem já usou, aprova</h2>
-    <div class="social-proof">
-      <img src="https://i.postimg.cc/SstcB6n5/Chat-GPT-Image-Jul-21-2026-11-30-58-AM.png" alt="Depoimentos de alunos elogiando a DeepStudy em conversas e comentários nas redes sociais" loading="lazy" decoding="async">
-    </div>
-    <p class="social-note">Candidatos da SEDES DF já estão usando a DeepStudy para organizar a reta final até setembro.</p>
-  </div>
-</section>
+    <section class="section" id="planos"><div class="wrap"><span class="eyebrow">Escolha seu plano</span><h2 class="title">Escolha seu plano para a Transpetro.</h2><p class="lead">Acesso imediato. Sem multa e sem fidelidade.</p><details class="offer-faq"><summary>Após a compra, por onde recebo e como acesso?</summary><div class="offer-answer"><p>Assim que o pagamento é confirmado, o acesso chega <strong>no seu e-mail</strong> — na hora, no cartão e no Pix.</p><p>Pra entrar, use <strong>o mesmo e-mail da compra</strong> ao se cadastrar na plataforma. É só isso: comprou, recebeu, estudou.</p></div></details><div class="plans">
+      <article class="plan"><div class="plan-name">Básico</div><p class="plan-desc">Para começar a praticar agora.</p><span class="price-prefix">10x de</span><div class="price">R$ 6,79<small>/mês</small></div><p class="billing">ou R$ 67,90 à vista</p><ul><li>1 Plano de Estudos Turbo</li></ul><a class="plan-btn basic-offer" href="https://pay.cakto.com.br/3epkcd2_658166">Escolher o Básico</a></article>
+      <article class="plan featured"><span class="badge">MELHOR ESCOLHA</span><div class="plan-name">Completo e Vitalício</div><p class="plan-desc">Toda a jornada de preparação, sem prazo para acabar.</p><span class="price-prefix">10x de</span><div class="price">R$ 9,70<small>/mês</small></div><p class="billing">ou R$ 97,00 à vista · acesso vitalício</p><ul><li>Planos de Estudos Turbo — Ilimitados</li><li>Raio-X da Cesgranrio — Ilimitado</li><li>Estudo Teórico do Edital com IA — Ilimitado</li><li>Banco de Questões Ilimitado</li><li>Flashcards com IA Ilimitado</li></ul><a class="plan-btn checkout-link" data-plan="completo-vitalicio" data-value="97.00" data-currency="BRL" href="https://pay.cakto.com.br/cdf3frg_656564">Quero acesso completo</a></article>
+    </div><p class="plan-note">Ambiente seguro · Acesso liberado após a confirmação do pagamento · Suporte quando precisar</p></div></section>
 
-<!-- EMPILHAMENTO -->
-<section class="sec sec-alt">
-  <div class="wrap">
-    <span class="tag">O valor real</span>
-    <h2>Quanto custaria contratar tudo isso separado?</h2>
-    <div class="stack">
-      <div class="stack-row"><span class="lbl"><span class="ic">◷</span>Mentoria &amp; Cronograma</span><span class="val">R$ 497,00</span></div>
-      <div class="stack-row"><span class="lbl"><span class="ic">▤</span>Raio-X da Banca</span><span class="val">R$ 197,00</span></div>
-      <div class="stack-row"><span class="lbl"><span class="ic">▣</span>Banco de Questões</span><span class="val">R$ 49,90</span></div>
-      <div class="stack-row"><span class="lbl"><span class="ic">⚑</span>Flashcards com IA</span><span class="val">R$ 29,90</span></div>
-      <div class="stack-total"><span class="lbl">Total mensal</span><span class="val">R$ 773,80</span></div>
-    </div>
-    <p class="stack-punch">No plano anual, você <span class="mint">não paga nem 5%</span> disso.</p>
-  </div>
-</section>
+    <section class="section alt"><div class="wrap"><span class="eyebrow">Em resumo</span><h2 class="title">Sua preparação Transpetro, em resumo.</h2><ul class="summary"><li>Cronograma focado na Transpetro</li><li>Foco no concurso da Transpetro</li><li>Simulados ilimitados no perfil Cesgranrio</li><li>Revisões e flashcards inteligentes</li><li>Tutor disponível para suas dúvidas</li><li>Métricas para acompanhar a evolução</li></ul></div></section>
 
-<!-- CUSTO DE OPORTUNIDADE -->
-<section class="sec">
-  <div class="wrap">
-    <span class="tag">Custo de oportunidade</span>
-    <h2>Quanto custa <span class="red">não passar</span> na SEDES DF?</h2>
-    <div class="cost-grid">
-      <div class="cost-card"><div class="period">1 mês fora do cargo</div><div class="amount">~R$ 8.000</div></div>
-      <div class="cost-card"><div class="period">6 meses fora</div><div class="amount">~R$ 48.000</div></div>
-      <div class="cost-card"><div class="period">12 meses fora</div><div class="amount">~R$ 96.000</div></div>
-    </div>
-    <p class="cost-foot">O valor da sua assinatura é uma fração do que você deixa de ganhar a cada mês adiando a aprovação.</p>
-    <p class="cost-disclaimer">Valores ilustrativos, baseados em remuneração de referência de cargos da SEDES DF. A DeepStudy é uma ferramenta de organização e estudo e não garante aprovação, que depende do desempenho individual do candidato.</p>
-  </div>
-</section>
+    <section class="section" id="faq"><div class="wrap"><span class="eyebrow">Dúvidas frequentes</span><h2 class="title">Tudo o que você precisa saber.</h2><p class="lead">Clique em uma pergunta para ver a resposta.</p><div class="faq">
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">A DeepStudy serve para qualquer cargo da Transpetro?<span>＋</span></button><div class="faq-a"><p>Sim. Você informa o cargo e envia o conteúdo programático; a plataforma usa essas informações para personalizar sua trilha.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">As questões seguem o estilo da Cesgranrio?<span>＋</span></button><div class="faq-a"><p>A preparação considera o perfil de cobrança da Cesgranrio e permite praticar os assuntos previstos para o seu cargo.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Consigo usar pelo celular?<span>＋</span></button><div class="faq-a"><p>Sim. A plataforma funciona direto no navegador do celular, tablet ou computador, sem instalação.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">O cronograma se adapta à minha rotina?<span>＋</span></button><div class="faq-a"><p>Sim. Você define sua disponibilidade e pode reorganizar a jornada quando sua rotina mudar.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Posso cancelar quando quiser?<span>＋</span></button><div class="faq-a"><p>Sim. Não há multa nem fidelidade. O cancelamento pode ser solicitado pelos canais de suporte.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Como recebo o acesso?<span>＋</span></button><div class="faq-a"><p>Após a confirmação do pagamento, você recebe por e-mail as instruções de acesso e o canal de suporte.</p></div></div>
+    </div></div></section>
 
-<!-- PLANOS -->
-<section class="sec sec-alt" id="planos">
-  <div class="wrap">
-    <span class="tag">Investimento</span>
-    <h2>Escolha seu plano</h2>
-    <p class="lead">Sem multas. Sem fidelidade. Cancele quando quiser.</p>
-    <div class="plans">
-
-      <!-- MENSAL -->
-      <div class="plan">
-        <div class="pname">Mensal</div>
-        <div class="pdesc">Acesso completo, pague mês a mês.</div>
-        <div class="price-old">de R$39,90 por</div>
-        <div class="price-main">R$ 34,90<small>/mês</small></div>
-        <div class="price-sub"></div>
-        <ul>
-          <li><span class="ck">✔</span>5 Planos + Cronograma de Estudo IA / Mês</li>
-          <li><span class="ck">✔</span>5 Raio-x do Edital e das provas anteriores</li>
-          <li><span class="ck">✔</span>Tutor Gemini Pro ilimitado</li>
-          <li><span class="ck">✔</span>Métricas de Desempenho</li>
-          <li><span class="ck">✔</span>Banco de Questões</li>
-          <li><span class="ck">✔</span>100 pedidos de provas anteriores</li>
-          <li><span class="ck">✔</span>Flash Cards com IA</li>
-        </ul>
-        <a href="https://pay.cakto.com.br/32vromm_654563" class="pbtn solid checkout-link" data-plan="mensal" data-value="34.90" data-currency="BRL">Quero ser Aprovado</a>
-      </div>
-
-      <!-- TRIMESTRAL -->
-      <div class="plan pop elite">
-        <div class="badge">MAIS POPULAR</div>
-        <div class="pname">Trimestral</div>
-        <div class="pdesc">Economize 2 meses e acelere seus estudos.</div>
-        <div class="price-old">de R$27,90 por</div>
-        <div class="price-main">R$ 19,90<small>/mês</small></div>
-        <div class="price-sub">Cobrado R$ 51,00 a cada 3 meses</div>
-        <ul>
-          <li><span class="ck">✔</span>10 Planos + Cronograma de Estudo IA / Mês</li>
-          <li><span class="ck">✔</span>10 Raio-x do Edital e das provas anteriores</li>
-          <li><span class="ck">✔</span>Tutor Gemini Pro ilimitado</li>
-          <li><span class="ck">✔</span>Métricas de Desempenho</li>
-          <li><span class="ck">✔</span>Banco de Questões</li>
-          <li><span class="ck">✔</span>1000 pedidos de provas anteriores</li>
-          <li><span class="ck">✔</span>Flash Cards com IA</li>
-        </ul>
-        <a href="https://pay.cakto.com.br/3epkcd2_658166" class="pbtn light checkout-link" data-plan="trimestral" data-value="51.00" data-currency="BRL">Quero ser Aprovado</a>
-      </div>
-
-      <!-- ANUAL -->
-      <div class="plan">
-        <div class="pname">Anual</div>
-        <div class="pdesc">Melhor custo-benefício para aprovação.</div>
-        <div class="price-old">de R$16,90 por</div>
-        <div class="price-main">R$ 11,90<small>/mês</small></div>
-        <div class="price-sub">Cobrado R$ 97,00 por ano</div>
-        <ul>
-          <li><span class="ck">✔</span>Planos + Cronograma de Estudo IA – ilimitado</li>
-          <li><span class="ck">✔</span>Raio-x do Edital e das provas anteriores – ilimitado</li>
-          <li><span class="ck">✔</span>Tutor Gemini Pro ilimitado</li>
-          <li><span class="ck">✔</span>Métricas de Desempenho</li>
-          <li><span class="ck">✔</span>Banco de Questões</li>
-          <li><span class="ck">✔</span>Pedidos de provas anteriores – ilimitados</li>
-          <li><span class="ck">✔</span>Flash Cards com IA – ilimitado</li>
-        </ul>
-        <a href="https://pay.cakto.com.br/cdf3frg_656564" class="pbtn solid checkout-link" data-plan="anual" data-value="97.00" data-currency="BRL">Quero ser Aprovado</a>
-      </div>
-
-    </div>
-    <p class="plans-note">Acesso imediato em qualquer plano · Sem cartão preso a fidelidade · Cancele quando quiser</p>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="sec">
-  <div class="wrap">
-    <span class="tag">Dúvidas frequentes</span>
-    <h2>Tudo que você precisa saber antes de começar</h2>
-    <div class="faq">
-      <div class="faq-item">
-        <button class="faq-q">Funciona para nível médio e nível superior?<span class="chev">▾</span></button>
-        <div class="faq-a"><p>Sim. O plano se adapta ao cargo que você escolher — Técnico (nível médio) ou Especialista (nível superior).</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Se sair retificação do edital, o plano atualiza sozinho?<span class="chev">▾</span></button>
-        <div class="faq-a"><p>Sim. Basta reenviar o edital atualizado e a IA recalcula o cronograma automaticamente.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Preciso de algum programa específico?<span class="chev">▾</span></button>
-        <div class="faq-a"><p>Não. Funciona direto no navegador do celular ou do computador.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Posso cancelar quando quiser?<span class="chev">▾</span></button>
-        <div class="faq-a"><p>Sim. Você pode cancelar quando quiser, sem multa e sem fidelidade.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Tenho dificuldade com IA. Vou conseguir usar?<span class="chev">▾</span></button>
-        <div class="faq-a"><p>Sim. A plataforma foi pensada para ser simples e guiada: você envia o edital, escolhe sua rotina e recebe o cronograma pronto para seguir, sem precisar dominar tecnologia.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Como eu acesso?<span class="chev">▾</span></button>
-        <div class="faq-a"><p>Após a efetivação do pagamento, disparamos um email com login, senha + link de suporte para dúvidas.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FECHAMENTO -->
-<section class="close">
-  <div class="wrap">
-    <h2>Faltam poucos meses até <span class="mint">06/09/2026</span></h2>
-    <p>Quem começa agora com direção chega mais preparado do que quem só decide na reta final.</p>
-    <a href="#planos" class="btn-primary">Quero meu cronograma até a prova</a>
-  </div>
-</section>
-
-
-<a class="whatsapp-float" href="https://wa.me/5511940655102?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20a%20DeepStudy%20SEDES%20DF." target="_blank" rel="noopener" aria-label="Tire dúvidas pelo WhatsApp se precisar">
-  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C8.87 3 3.04 8.74 3.04 15.8c0 2.26.61 4.47 1.76 6.4L3 29l6.98-1.78a13.1 13.1 0 0 0 6.06 1.48c7.17 0 13-5.74 13-12.8S23.21 3 16.04 3Zm0 23.52c-1.91 0-3.78-.5-5.41-1.45l-.39-.23-4.14 1.06 1.1-4.01-.26-.41a10.5 10.5 0 0 1-1.71-5.68c0-5.86 4.85-10.62 10.81-10.62 5.97 0 10.82 4.76 10.82 10.62 0 5.86-4.85 10.72-10.82 10.72Zm5.93-7.96c-.33-.16-1.93-.94-2.23-1.04-.3-.11-.52-.16-.74.16-.22.32-.85 1.04-1.04 1.25-.19.21-.38.24-.71.08-.33-.16-1.38-.5-2.63-1.6-.97-.85-1.63-1.9-1.82-2.22-.19-.32-.02-.5.14-.65.15-.14.33-.37.49-.56.16-.19.22-.32.33-.53.11-.21.05-.4-.03-.56-.08-.16-.74-1.76-1.01-2.41-.27-.63-.54-.54-.74-.55h-.63c-.22 0-.57.08-.87.4-.3.32-1.14 1.1-1.14 2.68s1.17 3.11 1.33 3.32c.16.21 2.3 3.45 5.58 4.84.78.33 1.39.53 1.86.68.78.24 1.49.21 2.05.13.63-.09 1.93-.78 2.2-1.53.27-.75.27-1.39.19-1.53-.08-.13-.3-.21-.63-.37Z"/></svg>
-  <span>Tire Dúvidas se precisar</span>
-</a>
-
-<!-- FOOTER -->
-<footer>
-  <div class="fbrand">
-    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7l9 5 9-5-9-5z" fill="#2ECC71"/><path d="M3 12l9 5 9-5M3 17l9 5 9-5" stroke="#2ECC71" stroke-width="1.6" fill="none"/></svg>
-    DeepStudy<span class="mint">.AI</span>
-  </div>
-  <div class="flinks">
-    <a href="/politica-de-privacidade">Política de Privacidade</a>
-    <a href="/termos">Termos de Uso</a>
-    <a href="#planos">Planos</a>
-  </div>
-  <p class="copy">© 2026 DeepStudy.AI · Feito para acelerar sua preparação. A DeepStudy é uma ferramenta de estudo e não possui vínculo com a banca Quadrix, com a SEDES ou com o Governo do Distrito Federal.</p>
-</footer>
-
-<script>
-document.querySelectorAll('.faq-q').forEach(function(btn){
-  btn.addEventListener('click',function(){
-    var item=btn.parentElement;
-    var ans=item.querySelector('.faq-a');
-    var open=item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(function(i){
-      i.classList.remove('open');
-      i.querySelector('.faq-a').style.maxHeight=null;
-    });
-    if(!open){
-      item.classList.add('open');
-      ans.style.maxHeight=ans.scrollHeight+'px';
-    }
-  });
-});
-
-
-(function(w,d){
-  var pixelId=w.metaPixelId||'1083649257004430';
-  function createEventId(prefix){
-    if(typeof w.metaCreateEventId==='function'){return w.metaCreateEventId(prefix);}
-    return (prefix||'evt')+'-'+Date.now()+'-'+Math.random().toString(36).slice(2);
-  }
-  function ensureMetaPixel(){
-    if(typeof w.fbq==='function'){return;}
-    !function(f,b,e,v,n,t,s){
-      if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments);};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
-      s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);
-    }(w,d,'script','https://connect.facebook.net/en_US/fbevents.js');
-    w.fbq('init',pixelId);
-    w.fbq('track','PageView',{},{eventID:w.metaPageViewEventId||createEventId('pv')});
-  }
-  function beaconFallback(eventName,eventId,params){
-    if(typeof w.metaBeaconFallback==='function'){w.metaBeaconFallback(eventName,eventId,params);return;}
-    var payload=new URLSearchParams({id:pixelId,ev:eventName,eventID:eventId,dl:w.location.href,rl:d.referrer||'',if:'false',ts:String(Date.now())});
-    Object.keys(params||{}).forEach(function(key){payload.set('cd['+key+']',params[key]);});
-    var url='https://www.facebook.com/tr?'+payload.toString();
-    if(navigator.sendBeacon&&navigator.sendBeacon(url)){return;}
-    var img=new Image(1,1);img.style.display='none';img.src=url;
-  }
-  function trackMeta(eventName,params,eventId){
-    ensureMetaPixel();
-    var id=eventId||createEventId(eventName.toLowerCase());
-    if(typeof w.fbq==='function'){
-      w.fbq('track',eventName,params||{},{eventID:id});
-    }else{
-      beaconFallback(eventName,id,params||{});
-    }
-    return id;
-  }
-  function getCheckoutParams(link){
-    return {
-      content_name:link.dataset.plan||'plano',
-      content_category:'SEDES DF',
-      content_type:'product',
-      currency:link.dataset.currency||'BRL',
-      value:Number(link.dataset.value||0)
-    };
-  }
-  function fireCheckout(link){
-    if(link.dataset.checkoutTracked==='1'){return link.dataset.checkoutEventId;}
-    var eventId=createEventId('checkout');
-    link.dataset.checkoutTracked='1';
-    link.dataset.checkoutEventId=eventId;
-    try{trackMeta('InitiateCheckout',getCheckoutParams(link),eventId);}catch(err){
-      setTimeout(function(){throw err;},0);
-    }
-    return eventId;
-  }
-  ensureMetaPixel();
-  document.querySelectorAll('.checkout-link').forEach(function(link){
-    link.addEventListener('pointerdown',function(event){
-      if(event.button===0&&!event.metaKey&&!event.ctrlKey&&!event.shiftKey&&!event.altKey){fireCheckout(link);}
-    });
-    link.addEventListener('touchstart',function(){fireCheckout(link);},{passive:true});
-    link.addEventListener('click',function(event){
-      fireCheckout(link);
-      if(event.defaultPrevented||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey||event.button!==0||link.target==='_blank'){
-        return;
-      }
-      event.preventDefault();
-      var destination=link.href;
-      setTimeout(function(){w.location.assign(destination);},700);
-    });
-  });
-  var query=new URLSearchParams(w.location.search);
-  var isPurchase=query.get('meta_event')==='Purchase'||query.get('purchase')==='success'||['approved','paid'].indexOf(query.get('status'))!==-1||['approved','paid'].indexOf(query.get('payment_status'))!==-1;
-  if(isPurchase){
-    trackMeta('Purchase',{
-      content_name:query.get('plan')||'plano',
-      currency:query.get('currency')||'BRL',
-      value:query.get('value')||'0'
-    },query.get('eventID')||createEventId('purchase'));
-  }
-})(window,document);
-</script>
+    <section class="closing"><div class="wrap"><span class="pill">Seu próximo ciclo começa agora</span><h2>Comece agora a treinar para a Transpetro com a Cesgranrio em mente.</h2><p>Pare de procurar questões genéricas: gere simulados focados no seu cargo, revise seus erros e avance com direção.</p><a class="primary" href="#planos">Gerar meus simulados agora →</a></div></section>
+  </main>
+  <div class="upgrade-modal" role="dialog" aria-modal="true" aria-labelledby="upgrade-title" aria-hidden="true"><div class="upgrade-dialog"><button class="modal-close" type="button" aria-label="Fechar oferta">×</button><p class="modal-kicker">Espera — vale a pena ler</p><h2 id="upgrade-title">Por apenas <strong>R$ 2,90 a mais por mês</strong> ou R$ 29,10 a mais, você leva o Completo — <strong class="modal-red">Vitalício</strong>.</h2><p>Questões e simulados são um ótimo começo. Mas o <b>Completo e Vitalício</b> entrega a preparação inteira: Planos de Estudos Turbo e Raio-X da Cesgranrio ilimitados, Estudo Teórico do Edital com IA, banco de questões, flashcards e acesso sem prazo para acabar.</p><div class="upgrade-compare"><div class="upgrade-choice"><small>Questões + simulados</small><b>R$ 67,90</b><small>Plano Básico</small></div><div class="upgrade-choice"><small>Completo e Vitalício</small><b>R$ 97,00</b><small>Tudo incluso</small></div></div><a class="modal-primary checkout-link" data-plan="completo-vitalicio" data-value="97.00" data-currency="BRL" href="https://pay.cakto.com.br/cdf3frg_656564">Quero o Completo e Vitalício — R$ 97,00 →</a><a class="modal-secondary checkout-link" data-plan="basico" data-value="67.90" data-currency="BRL" href="https://pay.cakto.com.br/3epkcd2_658166">Não, quero continuar somente com o Básico de R$ 67,90 →</a></div></div>
+  <footer><div class="wrap footer-inner"><a class="brand" href="#top"><span class="brand-mark">DS</span><span>DeepStudy <small>Transpetro · Cesgranrio</small></span></a><p class="footer-copy">© 2026 DeepStudy.AI. Ferramenta independente de organização e estudo, sem vínculo com a Transpetro, a Petrobras ou a Fundação Cesgranrio. A aprovação depende do desempenho individual.</p><div class="footer-links"><a href="/termos">Termos</a><a href="/politica-de-privacidade">Privacidade</a></div></div></footer>
+  <script>
+    document.querySelectorAll('.faq-q').forEach(function(button){button.addEventListener('click',function(){var item=button.parentElement;var answer=item.querySelector('.faq-a');var willOpen=!item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(current){current.classList.remove('open');current.querySelector('.faq-q').setAttribute('aria-expanded','false');current.querySelector('.faq-a').style.maxHeight=null});if(willOpen){item.classList.add('open');button.setAttribute('aria-expanded','true');answer.style.maxHeight=answer.scrollHeight+'px'}})});
+    (function(){var carousel=document.querySelector('.carousel');if(!carousel)return;var track=carousel.querySelector('.carousel-track');var slides=Array.from(carousel.querySelectorAll('.carousel-slide'));var dotsBox=carousel.querySelector('.carousel-dots');var status=carousel.querySelector('.carousel-status span');var current=0;function show(index){current=(index+slides.length)%slides.length;track.style.transform='translateX(-'+(current*100)+'%)';dotsBox.querySelectorAll('.carousel-dot').forEach(function(dot,i){dot.classList.toggle('active',i===current);dot.setAttribute('aria-current',i===current?'true':'false')});status.textContent=current+1}slides.forEach(function(_,i){var dot=document.createElement('button');dot.type='button';dot.className='carousel-dot'+(i===0?' active':'');dot.setAttribute('aria-label','Ir para a etapa '+(i+1));dot.setAttribute('aria-current',i===0?'true':'false');dot.addEventListener('click',function(){show(i)});dotsBox.appendChild(dot)});carousel.querySelector('.carousel-prev').addEventListener('click',function(){show(current-1)});carousel.querySelector('.carousel-next').addEventListener('click',function(){show(current+1)});carousel.addEventListener('keydown',function(event){if(event.key==='ArrowLeft')show(current-1);if(event.key==='ArrowRight')show(current+1)});var startX=0;track.addEventListener('touchstart',function(event){startX=event.touches[0].clientX},{passive:true});track.addEventListener('touchend',function(event){var distance=event.changedTouches[0].clientX-startX;if(Math.abs(distance)>45)show(current+(distance<0?1:-1))},{passive:true})})();
+    (function(){var trigger=document.querySelector('.basic-offer');var modal=document.querySelector('.upgrade-modal');var close=modal.querySelector('.modal-close');var previousFocus;function openModal(event){event.preventDefault();previousFocus=document.activeElement;modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';close.focus()}function closeModal(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';if(previousFocus)previousFocus.focus()}trigger.addEventListener('click',openModal);close.addEventListener('click',closeModal);modal.addEventListener('click',function(event){if(event.target===modal)closeModal()});document.addEventListener('keydown',function(event){if(event.key==='Escape'&&modal.classList.contains('open'))closeModal()})})();
+    (function(w,d){var pixelId='1083649257004430';function id(prefix){return prefix+'-'+Date.now()+'-'+Math.random().toString(36).slice(2)}function load(){if(w.fbq)return;!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=true;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=true;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(w,d,'script','https://connect.facebook.net/en_US/fbevents.js');w.fbq('init',pixelId);w.fbq('track','PageView')}load();d.querySelectorAll('.checkout-link').forEach(function(link){link.addEventListener('click',function(){w.fbq('track','InitiateCheckout',{content_name:link.dataset.plan,content_category:'Transpetro',currency:link.dataset.currency,value:Number(link.dataset.value)},{eventID:id('checkout')})})})})(window,document);
+  </script>
 </body>
 </html>
