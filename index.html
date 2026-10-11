@@ -109,7 +109,26 @@
     document.querySelectorAll('.faq-q').forEach(function(button){button.addEventListener('click',function(){var item=button.parentElement;var answer=item.querySelector('.faq-a');var willOpen=!item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(current){current.classList.remove('open');current.querySelector('.faq-q').setAttribute('aria-expanded','false');current.querySelector('.faq-a').style.maxHeight=null});if(willOpen){item.classList.add('open');button.setAttribute('aria-expanded','true');answer.style.maxHeight=answer.scrollHeight+'px'}})});
     (function(){var carousel=document.querySelector('.carousel');if(!carousel)return;var track=carousel.querySelector('.carousel-track');var slides=Array.from(carousel.querySelectorAll('.carousel-slide'));var dotsBox=carousel.querySelector('.carousel-dots');var status=carousel.querySelector('.carousel-status span');var current=0;function show(index){current=(index+slides.length)%slides.length;track.style.transform='translateX(-'+(current*100)+'%)';dotsBox.querySelectorAll('.carousel-dot').forEach(function(dot,i){dot.classList.toggle('active',i===current);dot.setAttribute('aria-current',i===current?'true':'false')});status.textContent=current+1}slides.forEach(function(_,i){var dot=document.createElement('button');dot.type='button';dot.className='carousel-dot'+(i===0?' active':'');dot.setAttribute('aria-label','Ir para a etapa '+(i+1));dot.setAttribute('aria-current',i===0?'true':'false');dot.addEventListener('click',function(){show(i)});dotsBox.appendChild(dot)});carousel.querySelector('.carousel-prev').addEventListener('click',function(){show(current-1)});carousel.querySelector('.carousel-next').addEventListener('click',function(){show(current+1)});carousel.addEventListener('keydown',function(event){if(event.key==='ArrowLeft')show(current-1);if(event.key==='ArrowRight')show(current+1)});var startX=0;track.addEventListener('touchstart',function(event){startX=event.touches[0].clientX},{passive:true});track.addEventListener('touchend',function(event){var distance=event.changedTouches[0].clientX-startX;if(Math.abs(distance)>45)show(current+(distance<0?1:-1))},{passive:true})})();
     (function(){var trigger=document.querySelector('.basic-offer');var modal=document.querySelector('.upgrade-modal');var close=modal.querySelector('.modal-close');var previousFocus;function openModal(event){event.preventDefault();previousFocus=document.activeElement;modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';close.focus()}function closeModal(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';if(previousFocus)previousFocus.focus()}trigger.addEventListener('click',openModal);close.addEventListener('click',closeModal);modal.addEventListener('click',function(event){if(event.target===modal)closeModal()});document.addEventListener('keydown',function(event){if(event.key==='Escape'&&modal.classList.contains('open'))closeModal()})})();
-    (function(w,d){var pixelId='1083649257004430';function id(prefix){return prefix+'-'+Date.now()+'-'+Math.random().toString(36).slice(2)}function load(){if(w.fbq)return;!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=true;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=true;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(w,d,'script','https://connect.facebook.net/en_US/fbevents.js');w.fbq('init',pixelId);w.fbq('track','PageView')}load();d.querySelectorAll('.checkout-link').forEach(function(link){link.addEventListener('click',function(){w.fbq('track','InitiateCheckout',{content_name:link.dataset.plan,content_category:'Transpetro',currency:link.dataset.currency,value:Number(link.dataset.value)},{eventID:id('checkout')})})})})(window,document);
+    (function(w,d){var pixelId='1083649257004430';function load(){if(w.fbq)return;!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=true;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=true;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(w,d,'script','https://connect.facebook.net/en_US/fbevents.js');w.fbq('init',pixelId);w.fbq('track','PageView')}load()})(window,document);
+    (function () {
+      var qs = window.location.search;
+      if (!qs) return;
+      var incoming = new URLSearchParams(qs);
+      function updateLinks() {
+        document.querySelectorAll('a[href*="pay.cakto.com.br"]').forEach(function (a) {
+          var url = new URL(a.href);
+          if (url.hostname !== 'pay.cakto.com.br') return;
+          incoming.forEach(function (value, key) {
+            url.searchParams.set(key, value);
+          });
+          if (a.href !== url.href) a.href = url.href;
+        });
+      }
+      updateLinks();
+      new MutationObserver(updateLinks).observe(document.body, {
+        childList: true, subtree: true, attributes: true, attributeFilter: ['href']
+      });
+    })();
   </script>
 </body>
 </html>
