@@ -69,7 +69,21 @@
 #por-dentro .carousel-arrow{flex-shrink:0}
 @media(max-width:360px){#por-dentro .carousel-slide{padding:10px}#por-dentro .slide-top{min-height:120px}#por-dentro .carousel-controls{gap:8px}}
 </style>
-</head>
+<style id="simple-carousel-zoom">
+.carousel-zoom-open{display:block;margin:16px auto 0;padding:12px 20px;min-height:46px;border:1px solid #34d399;border-radius:10px;background:#059669;color:#fff;font-weight:700;cursor:pointer}
+.carousel-zoom-dialog{width:96vw;max-width:1200px;max-height:94vh;max-height:94dvh;padding:0;border:1px solid #334155;border-radius:16px;background:#020617;color:#fff}
+.carousel-zoom-dialog::backdrop{background:rgba(0,0,0,.86)}
+.carousel-zoom-dialog[open]{display:flex;flex-direction:column}
+.carousel-zoom-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-shrink:0;padding:12px 16px;border-bottom:1px solid #334155;background:#0f172a}
+.carousel-zoom-close{display:flex;gap:8px;align-items:center;justify-content:center;min-height:48px;min-width:100px;padding:6px 12px;border:1px solid #64748b;border-radius:9px;background:#1e293b;color:#fff;font-weight:700;cursor:pointer}
+.carousel-zoom-close span{font-size:30px;line-height:1}
+.carousel-zoom-body{overflow:auto;min-height:0;padding:12px;overscroll-behavior:contain;touch-action:pan-x pan-y pinch-zoom}
+.carousel-zoom-body img{display:block;width:100%;height:auto;max-width:none;margin:0 auto}
+.carousel-zoom-body .carousel-player{width:100%;min-width:0}
+.carousel-zoom-body vturb-smartplayer{display:block;width:100%;max-width:100%}
+.carousel-zoom-note{font-size:.78rem;color:#94a3b8;margin:0;padding:8px 16px}
+@media(max-width:600px){.carousel-zoom-dialog{width:98vw;max-height:96dvh}.carousel-zoom-body:has(img) img{width:180%;min-width:600px}.carousel-zoom-bar{padding:8px 10px}.carousel-zoom-bar strong{font-size:.9rem}}
+</style></head>
 <body>
   <div class="announcement">Acesso Vitalício &nbsp;—&nbsp; Prova dia 06/12/2026</div>
   <nav class="nav wrap" aria-label="Navegação principal">
@@ -111,7 +125,7 @@
       <article class="carousel-slide" aria-label="6 de 8"><div class="slide-top"><span class="slide-step">Passo 06</span><h3>A IA calcula, com base nas provas anteriores, os assuntos mais prováveis de cair</h3></div><div class="portrait-media"><a class="carousel-image-link" href="https://i.postimg.cc/prRmnfXh/Captura-de-tela-2026-10-02-205410.png" target="_blank" rel="noopener" aria-label="Abrir imagem em tamanho original"><img src="https://i.postimg.cc/prRmnfXh/Captura-de-tela-2026-10-02-205410.png" alt="Análise da IA baseada nas provas anteriores da Cesgranrio" loading="lazy" decoding="async"></a><span class="media-hint">Toque na imagem para ampliar</span></div></article>
       <article class="carousel-slide" aria-label="7 de 8"><div class="slide-top"><span class="slide-step">Passo 07</span><h3>Ela transforma tudo em um plano personalizado para sua disponibilidade</h3></div><div class="portrait-media"><a class="carousel-image-link" href="https://i.postimg.cc/wMqBB90x/Captura-de-tela-2026-10-02-205550.png" target="_blank" rel="noopener" aria-label="Abrir imagem em tamanho original"><img src="https://i.postimg.cc/wMqBB90x/Captura-de-tela-2026-10-02-205550.png" alt="Plano de estudos personalizado para a disponibilidade do candidato" loading="lazy" decoding="async"></a><span class="media-hint">Toque na imagem para ampliar</span></div></article>
 <article class="carousel-slide carousel-video-slide" aria-label="8 de 8"><div class="slide-top"><span class="slide-step">Passo 08</span><h3>Veja a DeepStudy em ação</h3></div><div class="portrait-media portrait-video"><div class="carousel-player"><vturb-smartplayer id="vid-6ad15fdb20ea5ce8f4874e69" style="display:block;margin:0 auto;width:100%;"><div class="vturb-player-placeholder" style="position:relative;width:100%;padding:65.8578856152513% 0 0;z-index:0;background-color:black;"></div></vturb-smartplayer></div></div></article>
-    </div></div><div class="carousel-controls"><button class="carousel-arrow carousel-prev" type="button" aria-label="Ver etapa anterior">←</button><div class="carousel-dots" aria-label="Escolher etapa"></div><button class="carousel-arrow carousel-next" type="button" aria-label="Ver próxima etapa">→</button></div><p class="carousel-status" aria-live="polite">Etapa <span>8</span> de 8</p></div></div></section>
+    </div></div><button class="carousel-zoom-open" type="button" aria-haspopup="dialog">⛶ Ampliar imagem ou vídeo</button><div class="carousel-controls"><button class="carousel-arrow carousel-prev" type="button" aria-label="Ver etapa anterior">←</button><div class="carousel-dots" aria-label="Escolher etapa"></div><button class="carousel-arrow carousel-next" type="button" aria-label="Ver próxima etapa">→</button></div><p class="carousel-status" aria-live="polite">Etapa <span>8</span> de 8</p></div></div></section>
 
     <section class="section soft" id="beneficios"><div class="wrap"><span class="eyebrow">O que a DeepStudy faz por você</span><h2 class="title">Tudo para dominar a prova da Transpetro em um só lugar.</h2><p class="lead">Simulados Cesgranrio, cronograma para a Transpetro e revisões que acompanham seu desempenho.</p><div class="feature-grid"><article class="feature"><span class="icon">◎</span><h3>Cronograma sob medida</h3><p>Seu cargo na Transpetro e suas horas livres viram um plano diário realista.</p></article><article class="feature"><span class="icon">⌁</span><h3>Simulados ilimitados Cesgranrio</h3><p>Gere novas questões por assunto e entenda cada erro com comentários objetivos.</p></article><article class="feature"><span class="icon">✦</span><h3>Revisão que não deixa esquecer</h3><p>Flashcards e ciclos de revisão aparecem no momento certo da jornada.</p></article></div></div></section>
 
@@ -169,5 +183,22 @@
   <!-- Metricool -->
   <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"564cac173d4df42b39b7c0e81fc0a2c7"})});</script>
 <script type="text/javascript">(function(){var s=document.createElement("script");s.src="https://scripts.converteai.net/8e5b8623-0871-4140-bf63-eaebe572a0e4/players/6ad15fdb20ea5ce8f4874e69/v4/player.js";s.async=true;document.head.appendChild(s)})();</script>
+<dialog class="carousel-zoom-dialog" aria-labelledby="carousel-zoom-title"><div class="carousel-zoom-bar"><strong id="carousel-zoom-title">Visualização ampliada</strong><button type="button" class="carousel-zoom-close" aria-label="Fechar ampliação"><span aria-hidden="true">×</span> Fechar</button></div><p class="carousel-zoom-note">Deslize para explorar a imagem. Para ampliar o vídeo ainda mais, gire o celular.</p><div class="carousel-zoom-body"></div></dialog>
+<script>
+(function(){
+var carousel=document.querySelector('#por-dentro .carousel'),dialog=document.querySelector('.carousel-zoom-dialog'),body=dialog.querySelector('.carousel-zoom-body'),close=dialog.querySelector('.carousel-zoom-close'),player=null,placeholder=null,previousFocus=null,oldOverflow='';
+function openZoom(slide){
+previousFocus=document.activeElement;oldOverflow=document.body.style.overflow;
+var img=slide.querySelector('img');if(img){var copy=img.cloneNode();copy.removeAttribute('loading');body.appendChild(copy)}else{player=slide.querySelector('.carousel-player');if(!player)return;placeholder=document.createComment('carousel-video-home');player.replaceWith(placeholder);body.appendChild(player)}
+dialog.querySelector('.carousel-zoom-note').textContent=img?'Deslize para os lados para explorar a imagem ampliada.':'Para ampliar o vídeo ainda mais, gire o celular.';
+document.body.style.overflow='hidden';dialog.showModal();body.scrollTo(0,0);close.focus()
+}
+carousel.querySelector('.carousel-zoom-open').addEventListener('click',function(){var dots=Array.from(carousel.querySelectorAll('.carousel-dot'));var index=dots.findIndex(function(dot){return dot.classList.contains('active')});openZoom(carousel.querySelectorAll('.carousel-slide')[Math.max(0,index)])});
+carousel.querySelectorAll('.carousel-image-link').forEach(function(link){link.addEventListener('click',function(event){event.preventDefault();openZoom(link.closest('.carousel-slide'))})});
+close.addEventListener('click',function(){dialog.close()});
+dialog.addEventListener('click',function(event){if(event.target===dialog){var r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close()}});
+dialog.addEventListener('close',function(){if(player&&placeholder){placeholder.replaceWith(player);player=null;placeholder=null}body.replaceChildren();document.body.style.overflow=oldOverflow;if(previousFocus)previousFocus.focus()})
+})();
+</script>
 </body>
 </html>
